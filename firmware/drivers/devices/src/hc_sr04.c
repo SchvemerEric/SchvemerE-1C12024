@@ -31,7 +31,7 @@ static gpio_t echo_st, trigger_st; /**<  Stores the pin inicilization*/
 
 /*==================[external functions definition]==========================*/
 
-bool HcSr04Init(gpio_t echo, gpio_t trigger){
+bool HcSr04Init(gpio_t echo, gpio_t trigger){ /*puedo elegir que pines concectar y saber cual usar para medir la distancia, tenemos que ver donde los concectamos*/
 	echo_st = echo;
 	trigger_st = trigger;
 

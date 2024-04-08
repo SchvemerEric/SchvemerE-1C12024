@@ -33,8 +33,8 @@ TaskHandle_t led3_task_handle = NULL;
 static void Led1Task(void *pvParameter){
     while(true){
         printf("LED_1 ON\n");
-        LedOn(LED_1);
-        vTaskDelay(CONFIG_BLINK_PERIOD_LED_1 / portTICK_PERIOD_MS);
+        LedOn(LED_1);/*a parrir de la def de modulos*/
+        vTaskDelay(CONFIG_BLINK_PERIOD_LED_1 / portTICK_PERIOD_MS);/*kerner del frtos vtaskdelay es una que me permite controloar el micro*/
         printf("LED_1 OFF\n");
         LedOff(LED_1);
         vTaskDelay(CONFIG_BLINK_PERIOD_LED_1 / portTICK_PERIOD_MS);
@@ -62,10 +62,14 @@ static void Led3Task(void *pvParameter){
         vTaskDelay(CONFIG_BLINK_PERIOD_LED_3 / portTICK_PERIOD_MS);
     }
 }
-/*==================[external functions definition]==========================*/
-void app_main(void){
+/*==================[external functions definition]==========================*/ /*este es la entrada*/
+void app_main(void){ /*es uana funsion que crea tarea, tarea que llama tarea */
     LedsInit();
     xTaskCreate(&Led1Task, "LED_1", 512, NULL, 5, &led1_task_handle);
     xTaskCreate(&Led2Task, "LED_2", 512, NULL, 5, &led2_task_handle);
     xTaskCreate(&Led3Task, "LED_3", 512, NULL, 5, &led3_task_handle);
 }
+/*que hago para ccrear la tara: la paametrizo, el nombre de la tarea es led 1 luego el 
+512es un tañano luego tenemos un campo para parsarle parametros que el el Null como no quiero nada 
+y despues ta la prioridad de la tarea(vamos a usar la coperativa, que va a antrar la que tenga la rpioridad mas 
+alta)*/

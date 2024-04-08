@@ -15,6 +15,12 @@
         {
             "path": "./projects/x_template"
         },
+        {
+            "path": "projects/Actividad_3_guia"
+        },
+        {
+            "path": "projects/Actividad_456_guia"
+        }
     ],
     "settings": {
         "idf.portWin": "COM14",
