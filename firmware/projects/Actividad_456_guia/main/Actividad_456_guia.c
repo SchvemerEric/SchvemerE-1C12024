@@ -50,12 +50,11 @@ typedef struct
 
 /**
  * @brief Convierte un número entero en su representación BCD (Binary-Coded Decimal).
+ *  Esta función toma un número entero y lo convierte en un arreglo de dígitos BCD.
  *
- * Esta función toma un número entero y lo convierte en un arreglo de dígitos BCD.
- *
- * @param data El número entero a convertir.
- * @param digits La cantidad de dígitos en el número.
- * @param bcd_number El arreglo donde se almacenará la representación BCD.
+ * @param data El número entero a convertir,sin signo de 32 bits.
+ * @param digits La cantidad de dígitos en el número,sin signo de 8 bits.
+ * @param bcd_number El arreglo donde se almacenará la representación BCD.de 8 bist.
  * @return 0 si la conversión fue exitosa.
  */
 int8_t convertToBcdArray(uint32_t data, uint8_t digits, uint8_t *bcd_number)
@@ -69,21 +68,21 @@ int8_t convertToBcdArray(uint32_t data, uint8_t digits, uint8_t *bcd_number)
 }
 
 /**
- * @brief Establece el estado de los pines GPIO según un valor en código binario decimal (BCD).
- *
+ * @brief Establece el estado de los pines GPIO según un valor en código binario decimal (BCD), cambia de estado.
  * Esta función toma un valor BCD (que representa un número binario de 4 bits ) y configura los pines GPIO
- *  en el arreglo según los bits individuales del valor BCD.
+ * en el arreglo según los bits individuales del valor BCD.
  *
- * @param bcd El valor BCD a interpretar (8 bits).
+ * @param bcd El valor BCD a interpretar, 8 bits.
  * @param gpioArray Un arreglo de estructuras `gpioConf_t` que representa los pines GPIO.
  */
 void setGpioState(uint8_t bcd, gpioConf_t *gpioArray) //cambia de estado 
 {
 	for (int i = 0; i < 4; i++)
-	{
+	{/*Utilizo una máscara, corriendo 1 i veces y comparando en el for cada dígito y dependiendo
+        el resultado de la operación and seteo el estado de los puertosGPIO correspondiente*/
 		if ((bcd >> i) & 1)
 		{
-			GPIOOn(gpioArray[i].pin);
+			GPIOOn(gpioArray[i].pin); //deveria considerar alto y bajo? 
 		}
 		else
 			GPIOOff(gpioArray[i].pin);
@@ -148,8 +147,8 @@ void app_main(void)
 
 	convertToBcdArray(numero, digits, bcd_number);
 	 /*
-     Creo el vector de estructuras del tipo gpioConf_t que contienen los puertos GPIO_20, GPIO_21, GPIO_22 
-     y GPIO_23, con sus correspondientes direcciones(entrada/salida)
+     Creo vector de estructuras del tipo gpioConf_t que contienen los puertos GPIO_20, GPIO_21, GPIO_22 
+     y GPIO_23. con sus correspondientes direcciones(entrada/salida)
     */
 	gpioConf_t gpioArray[4] =
 		{
