@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>proyecto 2 Actividad 4: Referencia del archivo C:/Repositorios/SchvemerE-1C12024/firmware/projects/Proyecto_2_Act_4/main/Proyecto_2_Act_4.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">proyecto 2 Actividad 4<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">visualizacion de digitos en pantalla led</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_proyecto__2___act__4_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo Proyecto_2_Act_4.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="led_8h_source.html">led.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="switch_8h_source.html">switch.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gpio__mcu_8h_source.html">gpio_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lcditse0803_8h_source.html">lcditse0803.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="hc__sr04_8h_source.html">hc_sr04.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="delay__mcu_8h_source.html">delay_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uart__mcu_8h_source.html">uart_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>&quot;</code><br />
+</div>
+<p><a href="_proyecto__2___act__4_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a3df1b4cad09974bfc68858fad7cdc054" id="r_a3df1b4cad09974bfc68858fad7cdc054"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3df1b4cad09974bfc68858fad7cdc054">CONFIG_BLINK_PERIOD</a>&#160;&#160;&#160;2000</td></tr>
+<tr class="separator:a3df1b4cad09974bfc68858fad7cdc054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ce675c1658b03dd68cdf3b50b51fc29" id="r_a5ce675c1658b03dd68cdf3b50b51fc29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ce675c1658b03dd68cdf3b50b51fc29">CONFIG_BLINK_PERIODo</a>&#160;&#160;&#160;4329</td></tr>
+<tr class="separator:a5ce675c1658b03dd68cdf3b50b51fc29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b20d41d6252e9871430c242cb1a56e7" id="r_a6b20d41d6252e9871430c242cb1a56e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b20d41d6252e9871430c242cb1a56e7">BUFFER_SIZE</a>&#160;&#160;&#160;231</td></tr>
+<tr class="memdesc:a6b20d41d6252e9871430c242cb1a56e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tamaño del vector que contiene los datos de un ECG.  <br /></td></tr>
+<tr class="separator:a6b20d41d6252e9871430c242cb1a56e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ad9278972624167025b4b2910afc9765e" id="r_ad9278972624167025b4b2910afc9765e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9278972624167025b4b2910afc9765e">FuncTimer</a> (void *param)</td></tr>
+<tr class="separator:ad9278972624167025b4b2910afc9765e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73eb4bf40013663fabec20bd6685f5f" id="r_ab73eb4bf40013663fabec20bd6685f5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab73eb4bf40013663fabec20bd6685f5f">FuncTimer_2</a> (void *param)</td></tr>
+<tr class="separator:ab73eb4bf40013663fabec20bd6685f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149af7f1b786186d4c60951539cfbabb" id="r_a149af7f1b786186d4c60951539cfbabb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a149af7f1b786186d4c60951539cfbabb">DA_conversor_task</a> ()</td></tr>
+<tr class="memdesc:a149af7f1b786186d4c60951539cfbabb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tarea involucrada en la conversion DA.  <br /></td></tr>
+<tr class="separator:a149af7f1b786186d4c60951539cfbabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70" id="r_a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+<tr class="separator:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a643ccc8934e222043d612f36325e900c" id="r_a643ccc8934e222043d612f36325e900c"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a643ccc8934e222043d612f36325e900c">convadc_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:a643ccc8934e222043d612f36325e900c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30657eb8a26cfd2c9873262fbdb4750a" id="r_a30657eb8a26cfd2c9873262fbdb4750a"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30657eb8a26cfd2c9873262fbdb4750a">ConversorDA_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:a30657eb8a26cfd2c9873262fbdb4750a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6e451eccf9519b0809baad41f5ab241" id="r_aa6e451eccf9519b0809baad41f5ab241"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6e451eccf9519b0809baad41f5ab241">data</a></td></tr>
+<tr class="separator:aa6e451eccf9519b0809baad41f5ab241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb559820d9ca11295b4500f179ef6392" id="r_acb559820d9ca11295b4500f179ef6392"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb559820d9ca11295b4500f179ef6392">i</a> =0</td></tr>
+<tr class="separator:acb559820d9ca11295b4500f179ef6392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dafb8b8179af8e9f4cc4df3f588e42e" id="r_a2dafb8b8179af8e9f4cc4df3f588e42e"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dafb8b8179af8e9f4cc4df3f588e42e">ecg</a> [<a class="el" href="#a6b20d41d6252e9871430c242cb1a56e7">BUFFER_SIZE</a>]</td></tr>
+<tr class="separator:a2dafb8b8179af8e9f4cc4df3f588e42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de «define»</h2>
+<a id="a6b20d41d6252e9871430c242cb1a56e7" name="a6b20d41d6252e9871430c242cb1a56e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b20d41d6252e9871430c242cb1a56e7">&#9670;&#160;</a></span>BUFFER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUFFER_SIZE&#160;&#160;&#160;231</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tamaño del vector que contiene los datos de un ECG. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto__2___act__4_8c_source.html#l00064">64</a> del archivo <a class="el" href="_proyecto__2___act__4_8c_source.html">Proyecto_2_Act_4.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto__2___act__4_8c_source.html#l00146">DA_conversor_task()</a>.</p>
+
+</div>
+</div>
+<a id="a3df1b4cad09974bfc68858fad7cdc054" name="a3df1b4cad09974bfc68858fad7cdc054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3df1b4cad09974bfc68858fad7cdc054">&#9670;&#160;</a></span>CONFIG_BLINK_PERIOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_BLINK_PERIOD&#160;&#160;&#160;2000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto__2___act__4_8c_source.html#l00046">46</a> del archivo <a class="el" href="_proyecto__2___act__4_8c_source.html">Proyecto_2_Act_4.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto__2___act__4_8c_source.html#l00164">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a5ce675c1658b03dd68cdf3b50b51fc29" name="a5ce675c1658b03dd68cdf3b50b51fc29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ce675c1658b03dd68cdf3b50b51fc29">&#9670;&#160;</a></span>CONFIG_BLINK_PERIODo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_BLINK_PERIODo&#160;&#160;&#160;4329</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto__2___act__4_8c_source.html#l00047">47</a> del archivo <a class="el" href="_proyecto__2___act__4_8c_source.html">Proyecto_2_Act_4.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto__2___act__4_8c_source.html#l00164">app_main()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a630544a7f0a2cc40d8a7fefab7e2fe70" name="a630544a7f0a2cc40d8a7fefab7e2fe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&#160;</a></span>app_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void app_main </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto__2___act__4_8c_source.html#l00164">164</a> del archivo <a class="el" href="_proyecto__2___act__4_8c_source.html">Proyecto_2_Act_4.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="analog__io__mcu_8h_source.html#l00038">ADC_SINGLE</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00045">AnalogInputInit()</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00095">AnalogOutputInit()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00032">CH1</a>, <a class="el" href="_proyecto__2___act__4_8c_source.html#l00046">CONFIG_BLINK_PERIOD</a>, <a class="el" href="_proyecto__2___act__4_8c_source.html#l00047">CONFIG_BLINK_PERIODo</a>, <a class="el" href="_proyecto__2___act__4_8c_source.html#l00053">convadc_task_handle</a>, <a class="el" href="_proyecto__2___act__4_8c_source.html#l00058">ConversorDA_task_handle</a>, <a class="el" href="_proyecto__2___act__4_8c_source.html#l00146">DA_conversor_task()</a>, <a class="el" href="_proyecto__2___act__4_8c_source.html#l00106">FuncTimer()</a>, <a class="el" href="_proyecto__2___act__4_8c_source.html#l00131">FuncTimer_2()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00049">analog_input_config_t::input</a>, <a class="el" href="ili9341_8c_source.html#l00042">NULL</a>, <a class="el" href="uart__mcu_8h_source.html#l00039">serial_config_t::port</a>, <a class="el" href="timer__mcu_8h_source.html#l00040">timer_config_t::timer</a>, <a class="el" href="timer__mcu_8h_source.html#l00032">TIMER_A</a>, <a class="el" href="timer__mcu_8h_source.html#l00033">TIMER_B</a>, <a class="el" href="timer__mcu_8c_source.html#l00055">TimerInit()</a>, <a class="el" href="timer__mcu_8c_source.html#l00110">TimerStart()</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a> y <a class="el" href="uart__mcu_8c_source.html#l00107">UartInit()</a>.</p>
+
+</div>
+</div>
+<a id="a149af7f1b786186d4c60951539cfbabb" name="a149af7f1b786186d4c60951539cfbabb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a149af7f1b786186d4c60951539cfbabb">&#9670;&#160;</a></span>DA_conversor_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DA_conversor_task </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tarea involucrada en la conversion DA. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto__2___act__4_8c_source.html#l00146">146</a> del archivo <a class="el" href="_proyecto__2___act__4_8c_source.html">Proyecto_2_Act_4.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="analog__io__mcu_8c_source.html#l00140">AnalogOutputWrite()</a>, <a class="el" href="_proyecto__2___act__4_8c_source.html#l00064">BUFFER_SIZE</a>, <a class="el" href="_proyecto__2___act__4_8c_source.html#l00078">ecg</a> y <a class="el" href="_proyecto__2___act__4_8c_source.html#l00070">i</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto__2___act__4_8c_source.html#l00164">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="ad9278972624167025b4b2910afc9765e" name="ad9278972624167025b4b2910afc9765e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9278972624167025b4b2910afc9765e">&#9670;&#160;</a></span>FuncTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimer </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto__2___act__4_8c_source.html#l00106">106</a> del archivo <a class="el" href="_proyecto__2___act__4_8c_source.html">Proyecto_2_Act_4.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_proyecto__2___act__4_8c_source.html#l00053">convadc_task_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto__2___act__4_8c_source.html#l00164">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="ab73eb4bf40013663fabec20bd6685f5f" name="ab73eb4bf40013663fabec20bd6685f5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab73eb4bf40013663fabec20bd6685f5f">&#9670;&#160;</a></span>FuncTimer_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimer_2 </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto__2___act__4_8c_source.html#l00131">131</a> del archivo <a class="el" href="_proyecto__2___act__4_8c_source.html">Proyecto_2_Act_4.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="analog__io__mcu_8c_source.html#l00140">AnalogOutputWrite()</a>, <a class="el" href="_proyecto__2___act__4_8c_source.html#l00078">ecg</a> y <a class="el" href="_proyecto__2___act__4_8c_source.html#l00070">i</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto__2___act__4_8c_source.html#l00164">app_main()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="a643ccc8934e222043d612f36325e900c" name="a643ccc8934e222043d612f36325e900c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a643ccc8934e222043d612f36325e900c">&#9670;&#160;</a></span>convadc_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t convadc_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto__2___act__4_8c_source.html#l00053">53</a> del archivo <a class="el" href="_proyecto__2___act__4_8c_source.html">Proyecto_2_Act_4.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto__2___act__4_8c_source.html#l00164">app_main()</a> y <a class="el" href="_proyecto__2___act__4_8c_source.html#l00106">FuncTimer()</a>.</p>
+
+</div>
+</div>
+<a id="a30657eb8a26cfd2c9873262fbdb4750a" name="a30657eb8a26cfd2c9873262fbdb4750a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30657eb8a26cfd2c9873262fbdb4750a">&#9670;&#160;</a></span>ConversorDA_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t ConversorDA_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto__2___act__4_8c_source.html#l00058">58</a> del archivo <a class="el" href="_proyecto__2___act__4_8c_source.html">Proyecto_2_Act_4.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto__2___act__4_8c_source.html#l00164">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="aa6e451eccf9519b0809baad41f5ab241" name="aa6e451eccf9519b0809baad41f5ab241"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6e451eccf9519b0809baad41f5ab241">&#9670;&#160;</a></span>data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t data</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto__2___act__4_8c_source.html#l00069">69</a> del archivo <a class="el" href="_proyecto__2___act__4_8c_source.html">Proyecto_2_Act_4.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="i2c__mcu_8c_source.html#l00073">I2C_readBit()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00091">I2C_readBits()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00114">I2C_readByte()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00126">I2C_readBytes()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00260">I2C_readWord()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00172">I2C_writeBit()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00187">I2C_writeBits()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00214">I2C_writeByte()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00236">I2C_writeBytes()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00146">I2C_writeWord()</a>, <a class="el" href="ili9341_8c_source.html#l00380">ILI9341DrawChar()</a>, <a class="el" href="mpu6050_8c_source.html#l02728">MPU6050_getFIFOBytes()</a>, <a class="el" href="mpu6050_8c_source.html#l00025">MPU6050_ReadRegister()</a>, <a class="el" href="mpu6050_8c_source.html#l02739">MPU6050_setFIFOByte()</a>, <a class="el" href="mpu6050_8c_source.html#l01155">MPU6050_setSlave4OutputByte()</a>, <a class="el" href="mpu6050_8c_source.html#l02118">MPU6050_setSlaveOutputByte()</a>, <a class="el" href="uart__mcu_8c_source.html#l00161">UartReadBuffer()</a>, <a class="el" href="uart__mcu_8c_source.html#l00142">UartReadByte()</a>, <a class="el" href="uart__mcu_8c_source.html#l00209">UartSendBuffer()</a>, <a class="el" href="uart__mcu_8c_source.html#l00180">UartSendByte()</a> y <a class="el" href="ili9341_8c_source.html#l00222">WriteLCD()</a>.</p>
+
+</div>
+</div>
+<a id="a2dafb8b8179af8e9f4cc4df3f588e42e" name="a2dafb8b8179af8e9f4cc4df3f588e42e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dafb8b8179af8e9f4cc4df3f588e42e">&#9670;&#160;</a></span>ecg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char ecg[<a class="el" href="#a6b20d41d6252e9871430c242cb1a56e7">BUFFER_SIZE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    76, 77, 78, 77, 79, 86, 81, 76, 84, 93, 85, 80,</div>
+<div class="line">    89, 95, 89, 85, 93, 98, 94, 88, 98, 105, 96, 91,</div>
+<div class="line">    99, 105, 101, 96, 102, 106, 101, 96, 100, 107, 101,</div>
+<div class="line">    94, 100, 104, 100, 91, 99, 103, 98, 91, 96, 105, 95,</div>
+<div class="line">    88, 95, 100, 94, 85, 93, 99, 92, 84, 91, 96, 87, 80,</div>
+<div class="line">    83, 92, 86, 78, 84, 89, 79, 73, 81, 83, 78, 70, 80, 82,</div>
+<div class="line">    79, 69, 80, 82, 81, 70, 75, 81, 77, 74, 79, 83, 82, 72,</div>
+<div class="line">    80, 87, 79, 76, 85, 95, 87, 81, 88, 93, 88, 84, 87, 94,</div>
+<div class="line">    86, 82, 85, 94, 85, 82, 85, 95, 86, 83, 92, 99, 91, 88,</div>
+<div class="line">    94, 98, 95, 90, 97, 105, 104, 94, 98, 114, 117, 124, 144,</div>
+<div class="line">    180, 210, 236, 253, 227, 171, 99, 49, 34, 29, 43, 69, 89,</div>
+<div class="line">    89, 90, 98, 107, 104, 98, 104, 110, 102, 98, 103, 111, 101,</div>
+<div class="line">    94, 103, 108, 102, 95, 97, 106, 100, 92, 101, 103, 100, 94, 98,</div>
+<div class="line">    103, 96, 90, 98, 103, 97, 90, 99, 104, 95, 90, 99, 104, 100, 93,</div>
+<div class="line">    100, 106, 101, 93, 101, 105, 103, 96, 105, 112, 105, 99, 103, 108,</div>
+<div class="line">    99, 96, 102, 106, 99, 90, 92, 100, 87, 80, 82, 88, 77, 69, 75, 79,</div>
+<div class="line">    74, 67, 71, 78, 72, 67, 73, 81, 77, 71, 75, 84, 79, 77, 77, 76, 76,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="_proyecto__2___act__4_8c_source.html#l00078">78</a> del archivo <a class="el" href="_proyecto__2___act__4_8c_source.html">Proyecto_2_Act_4.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto__2___act__4_8c_source.html#l00146">DA_conversor_task()</a> y <a class="el" href="_proyecto__2___act__4_8c_source.html#l00131">FuncTimer_2()</a>.</p>
+
+</div>
+</div>
+<a id="acb559820d9ca11295b4500f179ef6392" name="acb559820d9ca11295b4500f179ef6392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb559820d9ca11295b4500f179ef6392">&#9670;&#160;</a></span>i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int i =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto__2___act__4_8c_source.html#l00070">70</a> del archivo <a class="el" href="_proyecto__2___act__4_8c_source.html">Proyecto_2_Act_4.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto__2___act__4_8c_source.html#l00146">DA_conversor_task()</a>, <a class="el" href="ili9341_8c_source.html#l00260">Fill()</a>, <a class="el" href="_proyecto__2___act__4_8c_source.html#l00131">FuncTimer_2()</a>, <a class="el" href="gpio__fast__out__mcu_8c_source.html#l00034">GPIOFastInit()</a>, <a class="el" href="hx711_8c_source.html#l00081">HX711_read()</a>, <a class="el" href="hx711_8c_source.html#l00117">HX711_readAverage()</a>, <a class="el" href="ili9341_8c_source.html#l00380">ILI9341DrawChar()</a>, <a class="el" href="ili9341_8c_source.html#l00438">ILI9341DrawInt()</a>, <a class="el" href="ili9341_8c_source.html#l00769">ILI9341DrawPicture()</a>, <a class="el" href="ili9341_8c_source.html#l00300">ILI9341Init()</a>, <a class="el" href="neopixel__stripe_8c_source.html#l00055">NeoPixelAllColor()</a>, <a class="el" href="neopixel__stripe_8c_source.html#l00044">NeoPixelAllOff()</a>, <a class="el" href="neopixel__stripe_8c_source.html#l00106">NeoPixelRainbow()</a>, <a class="el" href="neopixel__stripe_8c_source.html#l00067">NeoPixelSetArray()</a>, <a class="el" href="neopixel__stripe_8c_source.html#l00082">NeoPixelShift()</a>, <a class="el" href="hx711_8c_source.html#l00029">shiftIn()</a>, <a class="el" href="uart__mcu_8c_source.html#l00222">UartItoa()</a> y <a class="el" href="ws2812b_8c_source.html#l00340">ws2812bSend()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_436d476d4883225d50b14e25f9d932c5.html">SchvemerE-1C12024</a></li><li class="navelem"><a class="el" href="dir_4dae760e76e3f8945be3653b1bf2945b.html">firmware</a></li><li class="navelem"><a class="el" href="dir_07979404827261c3106a7b53ed9c6ee6.html">projects</a></li><li class="navelem"><a class="el" href="dir_486892e61ad8794254c45df5b1abde55.html">Proyecto_2_Act_4</a></li><li class="navelem"><a class="el" href="dir_2f1ed3b90d751737997aa580781872af.html">main</a></li><li class="navelem"><a class="el" href="_proyecto__2___act__4_8c.html">Proyecto_2_Act_4.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>
