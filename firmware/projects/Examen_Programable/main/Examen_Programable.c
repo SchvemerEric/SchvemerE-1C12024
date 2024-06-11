@@ -232,5 +232,9 @@ void app_main(void){
 xTaskCreate(&controlar_humedad, "controla la humedad", 512, NULL, 5, &ccontroldehumedad);
 
 xTaskCreate(&Control_PH, "controla el ph", 1024, NULL, 4, &controldeph);
+
+
+TimerStart(timer_humedad.timer);
+TimerStart(timerph.timer);
 }
 /*==================[end of file]============================================*/
