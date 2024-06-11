@@ -1,0 +1,25 @@
+var _examen___programable_8c =
+[
+    [ "gpioConf_t", "structgpio_conf__t.html", "structgpio_conf__t" ],
+    [ "REFRESCO_Humedad", "_examen___programable_8c.html#a17373770f3a921567c047813d5554b48", null ],
+    [ "REFRESCO_Ph", "_examen___programable_8c.html#af732c03945c2a3f3baf38621a8825dd3", null ],
+    [ "app_main", "_examen___programable_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70", null ],
+    [ "Control_PH", "_examen___programable_8c.html#a6e1d375b653f398c79761ecb1512565f", null ],
+    [ "controlar_humedad", "_examen___programable_8c.html#a5b1958ded66a2603b89316a4dbd646e2", null ],
+    [ "escribirValorEnPc", "_examen___programable_8c.html#a39f0a5a1b90aced8dfb2d1f4b9289eed", null ],
+    [ "FuncTimer_Humedad", "_examen___programable_8c.html#ae52d8478449d914f728d49f40e229403", null ],
+    [ "FuncTimer_ph", "_examen___programable_8c.html#a612462f4919e695c49afe388d2c5e9c8", null ],
+    [ "TeclaHold", "_examen___programable_8c.html#a17fbf6010f21aa416191ce018da77ac2", null ],
+    [ "TeclaOn", "_examen___programable_8c.html#a5d1e9b3b5d0b31bffca3023a4b09deda", null ],
+    [ "ccontroldehumedad", "_examen___programable_8c.html#ae73fcb631276c5f9cf55f65a81fb3063", null ],
+    [ "controldeph", "_examen___programable_8c.html#a470dd2d5a6263c801bf07c9d22ca5a02", null ],
+    [ "gpio", "_examen___programable_8c.html#a9a51bd5b603fb8301cd986b24f3d21dd", null ],
+    [ "hold", "_examen___programable_8c.html#af0129e079b57e897edf00f22cc25f3d4", null ],
+    [ "HUMEDAD", "_examen___programable_8c.html#a9df6e85650e59d5f6e7889372b496f09", null ],
+    [ "off", "_examen___programable_8c.html#adb67e275e89927c918987f070d8c49fa", null ],
+    [ "on", "_examen___programable_8c.html#aaa928c9a62449f7946da1e32f66c70d2", null ],
+    [ "P_h", "_examen___programable_8c.html#ad7e950f7739b480a5777d75040dc243d", null ],
+    [ "phMax", "_examen___programable_8c.html#a634b19a9c873499d59785daf7569128d", null ],
+    [ "phMin", "_examen___programable_8c.html#af5118d6b29dbd6c61f1472d3a17035b7", null ],
+    [ "start", "_examen___programable_8c.html#ab376b87f96a574a793c03c53e75afec8", null ]
+];

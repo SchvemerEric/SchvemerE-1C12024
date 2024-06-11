@@ -1,0 +1,630 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Examen Programable: Referencia del archivo C:/Repositorios/SchvemerE-1C12024/firmware/projects/Examen_Programable/main/Examen_Programable.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Examen Programable<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">visualizacion de digitos en pantalla led</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_examen___programable_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Estructuras de datos</a> &#124;
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo Examen_Programable.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="led_8h_source.html">led.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="switch_8h_source.html">switch.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gpio__mcu_8h_source.html">gpio_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lcditse0803_8h_source.html">lcditse0803.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="hc__sr04_8h_source.html">hc_sr04.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="delay__mcu_8h_source.html">delay_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uart__mcu_8h_source.html">uart_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>&quot;</code><br />
+<code>#include &quot;iir_filter.h&quot;</code><br />
+<code>#include &quot;buzzer.h&quot;</code><br />
+</div>
+<p><a href="_examen___programable_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpio_conf__t.html">gpioConf_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estructura del puerto GPIO, con un número de pin y una dirección.  <a href="structgpio_conf__t.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a17373770f3a921567c047813d5554b48" id="r_a17373770f3a921567c047813d5554b48"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17373770f3a921567c047813d5554b48">REFRESCO_Humedad</a>&#160;&#160;&#160;3000000</td></tr>
+<tr class="separator:a17373770f3a921567c047813d5554b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af732c03945c2a3f3baf38621a8825dd3" id="r_af732c03945c2a3f3baf38621a8825dd3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af732c03945c2a3f3baf38621a8825dd3">REFRESCO_Ph</a>&#160;&#160;&#160;3000000</td></tr>
+<tr class="separator:af732c03945c2a3f3baf38621a8825dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a5b1958ded66a2603b89316a4dbd646e2" id="r_a5b1958ded66a2603b89316a4dbd646e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b1958ded66a2603b89316a4dbd646e2">controlar_humedad</a> (void *pvParameters)</td></tr>
+<tr class="separator:a5b1958ded66a2603b89316a4dbd646e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f0a5a1b90aced8dfb2d1f4b9289eed" id="r_a39f0a5a1b90aced8dfb2d1f4b9289eed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39f0a5a1b90aced8dfb2d1f4b9289eed">escribirValorEnPc</a> ()</td></tr>
+<tr class="separator:a39f0a5a1b90aced8dfb2d1f4b9289eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e1d375b653f398c79761ecb1512565f" id="r_a6e1d375b653f398c79761ecb1512565f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e1d375b653f398c79761ecb1512565f">Control_PH</a> ()</td></tr>
+<tr class="separator:a6e1d375b653f398c79761ecb1512565f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d1e9b3b5d0b31bffca3023a4b09deda" id="r_a5d1e9b3b5d0b31bffca3023a4b09deda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d1e9b3b5d0b31bffca3023a4b09deda">TeclaOn</a> ()</td></tr>
+<tr class="memdesc:a5d1e9b3b5d0b31bffca3023a4b09deda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cambia el estado de la bandera booleana On.  <br /></td></tr>
+<tr class="separator:a5d1e9b3b5d0b31bffca3023a4b09deda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17fbf6010f21aa416191ce018da77ac2" id="r_a17fbf6010f21aa416191ce018da77ac2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17fbf6010f21aa416191ce018da77ac2">TeclaHold</a> ()</td></tr>
+<tr class="memdesc:a17fbf6010f21aa416191ce018da77ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cambia el estado de la bandera booleana Hold.  <br /></td></tr>
+<tr class="separator:a17fbf6010f21aa416191ce018da77ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae52d8478449d914f728d49f40e229403" id="r_ae52d8478449d914f728d49f40e229403"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae52d8478449d914f728d49f40e229403">FuncTimer_Humedad</a> (void *param)</td></tr>
+<tr class="separator:ae52d8478449d914f728d49f40e229403"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a612462f4919e695c49afe388d2c5e9c8" id="r_a612462f4919e695c49afe388d2c5e9c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a612462f4919e695c49afe388d2c5e9c8">FuncTimer_ph</a> (void *param)</td></tr>
+<tr class="separator:a612462f4919e695c49afe388d2c5e9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70" id="r_a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+<tr class="separator:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a9df6e85650e59d5f6e7889372b496f09" id="r_a9df6e85650e59d5f6e7889372b496f09"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9df6e85650e59d5f6e7889372b496f09">HUMEDAD</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:a9df6e85650e59d5f6e7889372b496f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e950f7739b480a5777d75040dc243d" id="r_ad7e950f7739b480a5777d75040dc243d"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7e950f7739b480a5777d75040dc243d">P_h</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:ad7e950f7739b480a5777d75040dc243d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5118d6b29dbd6c61f1472d3a17035b7" id="r_af5118d6b29dbd6c61f1472d3a17035b7"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5118d6b29dbd6c61f1472d3a17035b7">phMin</a> = 6.0</td></tr>
+<tr class="separator:af5118d6b29dbd6c61f1472d3a17035b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a634b19a9c873499d59785daf7569128d" id="r_a634b19a9c873499d59785daf7569128d"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a634b19a9c873499d59785daf7569128d">phMax</a> = 6.7</td></tr>
+<tr class="separator:a634b19a9c873499d59785daf7569128d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae73fcb631276c5f9cf55f65a81fb3063" id="r_ae73fcb631276c5f9cf55f65a81fb3063"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae73fcb631276c5f9cf55f65a81fb3063">ccontroldehumedad</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:ae73fcb631276c5f9cf55f65a81fb3063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a470dd2d5a6263c801bf07c9d22ca5a02" id="r_a470dd2d5a6263c801bf07c9d22ca5a02"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a470dd2d5a6263c801bf07c9d22ca5a02">controldeph</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:a470dd2d5a6263c801bf07c9d22ca5a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa928c9a62449f7946da1e32f66c70d2" id="r_aaa928c9a62449f7946da1e32f66c70d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa928c9a62449f7946da1e32f66c70d2">on</a></td></tr>
+<tr class="separator:aaa928c9a62449f7946da1e32f66c70d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb67e275e89927c918987f070d8c49fa" id="r_adb67e275e89927c918987f070d8c49fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb67e275e89927c918987f070d8c49fa">off</a></td></tr>
+<tr class="separator:adb67e275e89927c918987f070d8c49fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab376b87f96a574a793c03c53e75afec8" id="r_ab376b87f96a574a793c03c53e75afec8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab376b87f96a574a793c03c53e75afec8">start</a> = false</td></tr>
+<tr class="separator:ab376b87f96a574a793c03c53e75afec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0129e079b57e897edf00f22cc25f3d4" id="r_af0129e079b57e897edf00f22cc25f3d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0129e079b57e897edf00f22cc25f3d4">hold</a> = false</td></tr>
+<tr class="separator:af0129e079b57e897edf00f22cc25f3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a51bd5b603fb8301cd986b24f3d21dd" id="r_a9a51bd5b603fb8301cd986b24f3d21dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgpio_conf__t.html">gpioConf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a51bd5b603fb8301cd986b24f3d21dd">gpio</a> [5]</td></tr>
+<tr class="separator:a9a51bd5b603fb8301cd986b24f3d21dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de «define»</h2>
+<a id="a17373770f3a921567c047813d5554b48" name="a17373770f3a921567c047813d5554b48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17373770f3a921567c047813d5554b48">&#9670;&#160;</a></span>REFRESCO_Humedad</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REFRESCO_Humedad&#160;&#160;&#160;3000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00056">56</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00204">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="af732c03945c2a3f3baf38621a8825dd3" name="af732c03945c2a3f3baf38621a8825dd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af732c03945c2a3f3baf38621a8825dd3">&#9670;&#160;</a></span>REFRESCO_Ph</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REFRESCO_Ph&#160;&#160;&#160;3000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00057">57</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00204">app_main()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a630544a7f0a2cc40d8a7fefab7e2fe70" name="a630544a7f0a2cc40d8a7fefab7e2fe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&#160;</a></span>app_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void app_main </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00204">204</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen___programable_8c_source.html#l00077">ccontroldehumedad</a>, <a class="el" href="_examen___programable_8c_source.html#l00143">Control_PH()</a>, <a class="el" href="_examen___programable_8c_source.html#l00114">controlar_humedad()</a>, <a class="el" href="_examen___programable_8c_source.html#l00082">controldeph</a>, <a class="el" href="_examen___programable_8c_source.html#l00193">FuncTimer_Humedad()</a>, <a class="el" href="_examen___programable_8c_source.html#l00198">FuncTimer_ph()</a>, <a class="el" href="ili9341_8c_source.html#l00042">NULL</a>, <a class="el" href="_examen___programable_8c_source.html#l00056">REFRESCO_Humedad</a>, <a class="el" href="_examen___programable_8c_source.html#l00057">REFRESCO_Ph</a>, <a class="el" href="switch_8h_source.html#l00032">SWITCH_1</a>, <a class="el" href="switch_8h_source.html#l00033">SWITCH_2</a>, <a class="el" href="switch_8c_source.html#l00047">SwitchActivInt()</a>, <a class="el" href="_examen___programable_8c_source.html#l00183">TeclaHold()</a>, <a class="el" href="_examen___programable_8c_source.html#l00175">TeclaOn()</a>, <a class="el" href="timer__mcu_8h_source.html#l00040">timer_config_t::timer</a>, <a class="el" href="timer__mcu_8h_source.html#l00032">TIMER_A</a>, <a class="el" href="timer__mcu_8h_source.html#l00033">TIMER_B</a> y <a class="el" href="timer__mcu_8c_source.html#l00055">TimerInit()</a>.</p>
+
+</div>
+</div>
+<a id="a6e1d375b653f398c79761ecb1512565f" name="a6e1d375b653f398c79761ecb1512565f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e1d375b653f398c79761ecb1512565f">&#9670;&#160;</a></span>Control_PH()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Control_PH </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00143">143</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="analog__io__mcu_8c_source.html#l00105">AnalogInputReadSingle()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00032">CH1</a>, <a class="el" href="_examen___programable_8c_source.html#l00131">escribirValorEnPc()</a>, <a class="el" href="_examen___programable_8c_source.html#l00100">gpio</a>, <a class="el" href="_examen___programable_8c_source.html#l00070">phMax</a>, <a class="el" href="_examen___programable_8c_source.html#l00064">phMin</a> y <a class="el" href="_examen___programable_8c_source.html#l00095">gpioConf_t::pin</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00204">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a5b1958ded66a2603b89316a4dbd646e2" name="a5b1958ded66a2603b89316a4dbd646e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b1958ded66a2603b89316a4dbd646e2">&#9670;&#160;</a></span>controlar_humedad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void controlar_humedad </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pvParameters</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00114">114</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen___programable_8c_source.html#l00096">gpioConf_t::dir</a>, <a class="el" href="_examen___programable_8c_source.html#l00100">gpio</a> y <a class="el" href="_examen___programable_8c_source.html#l00095">gpioConf_t::pin</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00204">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a39f0a5a1b90aced8dfb2d1f4b9289eed" name="a39f0a5a1b90aced8dfb2d1f4b9289eed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39f0a5a1b90aced8dfb2d1f4b9289eed">&#9670;&#160;</a></span>escribirValorEnPc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void escribirValorEnPc </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00131">131</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a>, <a class="el" href="uart__mcu_8c_source.html#l00222">UartItoa()</a> y <a class="el" href="uart__mcu_8c_source.html#l00193">UartSendString()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00143">Control_PH()</a>.</p>
+
+</div>
+</div>
+<a id="ae52d8478449d914f728d49f40e229403" name="ae52d8478449d914f728d49f40e229403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae52d8478449d914f728d49f40e229403">&#9670;&#160;</a></span>FuncTimer_Humedad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimer_Humedad </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00193">193</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen___programable_8c_source.html#l00054">HUMEDAD</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00204">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a612462f4919e695c49afe388d2c5e9c8" name="a612462f4919e695c49afe388d2c5e9c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a612462f4919e695c49afe388d2c5e9c8">&#9670;&#160;</a></span>FuncTimer_ph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimer_ph </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00198">198</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen___programable_8c_source.html#l00055">P_h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00204">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a17fbf6010f21aa416191ce018da77ac2" name="a17fbf6010f21aa416191ce018da77ac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17fbf6010f21aa416191ce018da77ac2">&#9670;&#160;</a></span>TeclaHold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TeclaHold </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cambia el estado de la bandera booleana Hold. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00183">183</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen___programable_8c_source.html#l00085">on</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00204">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a5d1e9b3b5d0b31bffca3023a4b09deda" name="a5d1e9b3b5d0b31bffca3023a4b09deda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d1e9b3b5d0b31bffca3023a4b09deda">&#9670;&#160;</a></span>TeclaOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TeclaOn </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cambia el estado de la bandera booleana On. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00175">175</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen___programable_8c_source.html#l00085">on</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00204">app_main()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="ae73fcb631276c5f9cf55f65a81fb3063" name="ae73fcb631276c5f9cf55f65a81fb3063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae73fcb631276c5f9cf55f65a81fb3063">&#9670;&#160;</a></span>ccontroldehumedad</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t ccontroldehumedad = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00077">77</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00204">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a470dd2d5a6263c801bf07c9d22ca5a02" name="a470dd2d5a6263c801bf07c9d22ca5a02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a470dd2d5a6263c801bf07c9d22ca5a02">&#9670;&#160;</a></span>controldeph</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t controldeph = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00082">82</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00204">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a9a51bd5b603fb8301cd986b24f3d21dd" name="a9a51bd5b603fb8301cd986b24f3d21dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a51bd5b603fb8301cd986b24f3d21dd">&#9670;&#160;</a></span>gpio</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgpio_conf__t.html">gpioConf_t</a> gpio[5]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">={</div>
+<div class="line">    {<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393aa2918c94bcf473e7ff31138b6333f847">GPIO_19</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a081be372da926e3ca6f612b267854e95">GPIO_20</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a32ff7e9a2f00d396ff2b2b62af571d7c">GPIO_21</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393aca7c5f2acf755d61b35d05ea921c79eb">GPIO_22</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393aca7c5f2acf755d61b35d05ea921c79eb">GPIO_22</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>},</div>
+<div class="line"> </div>
+<div class="line">    }</div>
+<div class="ttc" id="agroup___g_i_o_p_html_gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516"><div class="ttname"><a href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a></div><div class="ttdeci">@ GPIO_OUTPUT</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00045">gpio_mcu.h:44</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_ggaf65604147d0244c9b13cfdc865ad5393a081be372da926e3ca6f612b267854e95"><div class="ttname"><a href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a081be372da926e3ca6f612b267854e95">GPIO_20</a></div><div class="ttdeci">@ GPIO_20</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00072">gpio_mcu.h:72</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_ggaf65604147d0244c9b13cfdc865ad5393a32ff7e9a2f00d396ff2b2b62af571d7c"><div class="ttname"><a href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a32ff7e9a2f00d396ff2b2b62af571d7c">GPIO_21</a></div><div class="ttdeci">@ GPIO_21</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00073">gpio_mcu.h:73</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_ggaf65604147d0244c9b13cfdc865ad5393aa2918c94bcf473e7ff31138b6333f847"><div class="ttname"><a href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393aa2918c94bcf473e7ff31138b6333f847">GPIO_19</a></div><div class="ttdeci">@ GPIO_19</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00071">gpio_mcu.h:71</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_ggaf65604147d0244c9b13cfdc865ad5393aca7c5f2acf755d61b35d05ea921c79eb"><div class="ttname"><a href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393aca7c5f2acf755d61b35d05ea921c79eb">GPIO_22</a></div><div class="ttdeci">@ GPIO_22</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00074">gpio_mcu.h:74</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00100">100</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00143">Control_PH()</a>, <a class="el" href="_examen___programable_8c_source.html#l00114">controlar_humedad()</a>, <a class="el" href="pwm__mcu_8c_source.html#l00039">PWMInit()</a> y <a class="el" href="servo__sg90_8c_source.html#l00033">ServoInit()</a>.</p>
+
+</div>
+</div>
+<a id="af0129e079b57e897edf00f22cc25f3d4" name="af0129e079b57e897edf00f22cc25f3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0129e079b57e897edf00f22cc25f3d4">&#9670;&#160;</a></span>hold</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hold = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00089">89</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+</div>
+</div>
+<a id="a9df6e85650e59d5f6e7889372b496f09" name="a9df6e85650e59d5f6e7889372b496f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df6e85650e59d5f6e7889372b496f09">&#9670;&#160;</a></span>HUMEDAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t HUMEDAD = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00054">54</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00193">FuncTimer_Humedad()</a>.</p>
+
+</div>
+</div>
+<a id="adb67e275e89927c918987f070d8c49fa" name="adb67e275e89927c918987f070d8c49fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb67e275e89927c918987f070d8c49fa">&#9670;&#160;</a></span>off</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool off</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00086">86</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+</div>
+</div>
+<a id="aaa928c9a62449f7946da1e32f66c70d2" name="aaa928c9a62449f7946da1e32f66c70d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa928c9a62449f7946da1e32f66c70d2">&#9670;&#160;</a></span>on</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool on</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00085">85</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00183">TeclaHold()</a> y <a class="el" href="_examen___programable_8c_source.html#l00175">TeclaOn()</a>.</p>
+
+</div>
+</div>
+<a id="ad7e950f7739b480a5777d75040dc243d" name="ad7e950f7739b480a5777d75040dc243d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7e950f7739b480a5777d75040dc243d">&#9670;&#160;</a></span>P_h</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t P_h = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00055">55</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00198">FuncTimer_ph()</a>.</p>
+
+</div>
+</div>
+<a id="a634b19a9c873499d59785daf7569128d" name="a634b19a9c873499d59785daf7569128d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a634b19a9c873499d59785daf7569128d">&#9670;&#160;</a></span>phMax</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float phMax = 6.7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00070">70</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00143">Control_PH()</a>.</p>
+
+</div>
+</div>
+<a id="af5118d6b29dbd6c61f1472d3a17035b7" name="af5118d6b29dbd6c61f1472d3a17035b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5118d6b29dbd6c61f1472d3a17035b7">&#9670;&#160;</a></span>phMin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float phMin = 6.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00064">64</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen___programable_8c_source.html#l00143">Control_PH()</a>.</p>
+
+</div>
+</div>
+<a id="ab376b87f96a574a793c03c53e75afec8" name="ab376b87f96a574a793c03c53e75afec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab376b87f96a574a793c03c53e75afec8">&#9670;&#160;</a></span>start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool start = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen___programable_8c_source.html#l00088">88</a> del archivo <a class="el" href="_examen___programable_8c_source.html">Examen_Programable.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_436d476d4883225d50b14e25f9d932c5.html">SchvemerE-1C12024</a></li><li class="navelem"><a class="el" href="dir_4dae760e76e3f8945be3653b1bf2945b.html">firmware</a></li><li class="navelem"><a class="el" href="dir_07979404827261c3106a7b53ed9c6ee6.html">projects</a></li><li class="navelem"><a class="el" href="dir_6f896785da69e11f0a1e19d1a792497f.html">Examen_Programable</a></li><li class="navelem"><a class="el" href="dir_088ff7823ad3dfa27c0c1970c65f2bc8.html">main</a></li><li class="navelem"><a class="el" href="_examen___programable_8c.html">Examen_Programable.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>
