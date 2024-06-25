@@ -1,0 +1,664 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>proyecto 2 Actividad 4: Referencia del archivo C:/Repositorios/SchvemerE-1C12024/firmware/projects/ThermingEMG/main/ThermingEMG.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">proyecto 2 Actividad 4<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">visualizacion de digitos en pantalla led</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_therming_e_m_g_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo ThermingEMG.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="led_8h_source.html">led.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="switch_8h_source.html">switch.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gpio__mcu_8h_source.html">gpio_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lcditse0803_8h_source.html">lcditse0803.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="hc__sr04_8h_source.html">hc_sr04.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="delay__mcu_8h_source.html">delay_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uart__mcu_8h_source.html">uart_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>&quot;</code><br />
+<code>#include &quot;iir_filter.h&quot;</code><br />
+<code>#include &quot;buzzer.h&quot;</code><br />
+</div>
+<p><a href="_therming_e_m_g_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a6b20d41d6252e9871430c242cb1a56e7" id="r_a6b20d41d6252e9871430c242cb1a56e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b20d41d6252e9871430c242cb1a56e7">BUFFER_SIZE</a>&#160;&#160;&#160;2000</td></tr>
+<tr class="memdesc:a6b20d41d6252e9871430c242cb1a56e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tamaño del vector que contiene los datos de un ECG.  <br /></td></tr>
+<tr class="separator:a6b20d41d6252e9871430c242cb1a56e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9401e43a8c86acafb31c8e2709baefa1" id="r_a9401e43a8c86acafb31c8e2709baefa1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9401e43a8c86acafb31c8e2709baefa1">SAMPLE_FREQ</a>&#160;&#160;&#160;200</td></tr>
+<tr class="memdesc:a9401e43a8c86acafb31c8e2709baefa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">definimos frecuencia maxima  <br /></td></tr>
+<tr class="separator:a9401e43a8c86acafb31c8e2709baefa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff4a12879297e69a77292c6052452b5" id="r_a8ff4a12879297e69a77292c6052452b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ff4a12879297e69a77292c6052452b5">T_SENIAL</a>&#160;&#160;&#160;4000</td></tr>
+<tr class="separator:a8ff4a12879297e69a77292c6052452b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25022864dfc8ec428e7128282e57b136" id="r_a25022864dfc8ec428e7128282e57b136"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25022864dfc8ec428e7128282e57b136">CHUNK</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:a25022864dfc8ec428e7128282e57b136"><td class="mdescLeft">&#160;</td><td class="mdescRight">cantidas de muestars que levanta y analiza  <br /></td></tr>
+<tr class="separator:a25022864dfc8ec428e7128282e57b136"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3c56336e03b5e68030bf8fe8cc87ca" id="r_a1a3c56336e03b5e68030bf8fe8cc87ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a3c56336e03b5e68030bf8fe8cc87ca">PWM_BUZZER</a>&#160;&#160;&#160;<a class="el" href="group___p_w_m.html#gga5800a2bada92ba802e1cbdb0307f0c7ba44646d1313a5c911c1500447f531f542">PWM_3</a></td></tr>
+<tr class="separator:a1a3c56336e03b5e68030bf8fe8cc87ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0de934e7c029888d399e2101aa735387" id="r_a0de934e7c029888d399e2101aa735387"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0de934e7c029888d399e2101aa735387">PWM_DC</a>&#160;&#160;&#160;50</td></tr>
+<tr class="separator:a0de934e7c029888d399e2101aa735387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e48086ec95b10d9c33a4bd2b21892c9" id="r_a8e48086ec95b10d9c33a4bd2b21892c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e48086ec95b10d9c33a4bd2b21892c9">OCTAVE_OFFSET</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a8e48086ec95b10d9c33a4bd2b21892c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a145103118f6d9d1129aa4509cf214a13" id="r_a145103118f6d9d1129aa4509cf214a13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a145103118f6d9d1129aa4509cf214a13">BUZZER</a>&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a4f3bac8a4733f9e96aa952fb1d9b0a7f">GPIO_23</a></td></tr>
+<tr class="separator:a145103118f6d9d1129aa4509cf214a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ad9278972624167025b4b2910afc9765e" id="r_ad9278972624167025b4b2910afc9765e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9278972624167025b4b2910afc9765e">FuncTimer</a> (void *param)</td></tr>
+<tr class="separator:ad9278972624167025b4b2910afc9765e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf7e02de051f4fbf3de810273726e8c3" id="r_abf7e02de051f4fbf3de810273726e8c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf7e02de051f4fbf3de810273726e8c3">RectifySignal</a> (float *<a class="el" href="#ade7883850d2de59d556a2acfd9296613">EMG</a>, float *output, size_t length)</td></tr>
+<tr class="separator:abf7e02de051f4fbf3de810273726e8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4ae9b90f16162ba6b767a6bd438e8a5" id="r_ad4ae9b90f16162ba6b767a6bd438e8a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4ae9b90f16162ba6b767a6bd438e8a5">SonarBuffery_task</a> ()</td></tr>
+<tr class="memdesc:ad4ae9b90f16162ba6b767a6bd438e8a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">funsion utilizada para hacer sonar el buffer a los distintos valores de frecuencia  <br /></td></tr>
+<tr class="separator:ad4ae9b90f16162ba6b767a6bd438e8a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7abd1c0b0bdd5a062b3a36bf63dd2e9b" id="r_a7abd1c0b0bdd5a062b3a36bf63dd2e9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7abd1c0b0bdd5a062b3a36bf63dd2e9b">FuncTimerSenial</a> (void *param)</td></tr>
+<tr class="separator:a7abd1c0b0bdd5a062b3a36bf63dd2e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee17a7cf131f01114b30bd26bda9ea54" id="r_aee17a7cf131f01114b30bd26bda9ea54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee17a7cf131f01114b30bd26bda9ea54">DetermineNoteIndex</a> (float amplitude)</td></tr>
+<tr class="separator:aee17a7cf131f01114b30bd26bda9ea54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70" id="r_a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+<tr class="separator:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a643ccc8934e222043d612f36325e900c" id="r_a643ccc8934e222043d612f36325e900c"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a643ccc8934e222043d612f36325e900c">convadc_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:a643ccc8934e222043d612f36325e900c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3647c1af364213f87c9b3699813aec18" id="r_a3647c1af364213f87c9b3699813aec18"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3647c1af364213f87c9b3699813aec18">HacerSonar_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:a3647c1af364213f87c9b3699813aec18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6e451eccf9519b0809baad41f5ab241" id="r_aa6e451eccf9519b0809baad41f5ab241"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6e451eccf9519b0809baad41f5ab241">data</a></td></tr>
+<tr class="separator:aa6e451eccf9519b0809baad41f5ab241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb559820d9ca11295b4500f179ef6392" id="r_acb559820d9ca11295b4500f179ef6392"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb559820d9ca11295b4500f179ef6392">i</a> =0</td></tr>
+<tr class="separator:acb559820d9ca11295b4500f179ef6392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b85fc472953eac39c2629b1f5d68617" id="r_a5b85fc472953eac39c2629b1f5d68617"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b85fc472953eac39c2629b1f5d68617">filter</a> = false</td></tr>
+<tr class="separator:a5b85fc472953eac39c2629b1f5d68617"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eaccb2b65e6eae52fe4d4e66d9f34c5" id="r_a3eaccb2b65e6eae52fe4d4e66d9f34c5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a> [] = {NOTE_C4, NOTE_DS4, NOTE_F4, NOTE_FS4, NOTE_G4, NOTE_AS4, NOTE_C5, NOTE_DS5}</td></tr>
+<tr class="separator:a3eaccb2b65e6eae52fe4d4e66d9f34c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051734f5aad36c2b59dd19d7a6ce4c12" id="r_a051734f5aad36c2b59dd19d7a6ce4c12"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a051734f5aad36c2b59dd19d7a6ce4c12">NUM_NOTAS</a> = sizeof(<a class="el" href="#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a>) / sizeof(<a class="el" href="#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a>[0])</td></tr>
+<tr class="separator:a051734f5aad36c2b59dd19d7a6ce4c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae127c510837f32a6f503f8f010ebc5fb" id="r_ae127c510837f32a6f503f8f010ebc5fb"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae127c510837f32a6f503f8f010ebc5fb">THRESHOLDS</a> [] = {0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0}</td></tr>
+<tr class="separator:ae127c510837f32a6f503f8f010ebc5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a458f36562402c03452d85793f502cd88" id="r_a458f36562402c03452d85793f502cd88"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a458f36562402c03452d85793f502cd88">NUM_THRESHOLDS</a> = sizeof(<a class="el" href="#ae127c510837f32a6f503f8f010ebc5fb">THRESHOLDS</a>) / sizeof(<a class="el" href="#ae127c510837f32a6f503f8f010ebc5fb">THRESHOLDS</a>[0])</td></tr>
+<tr class="separator:a458f36562402c03452d85793f502cd88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade7883850d2de59d556a2acfd9296613" id="r_ade7883850d2de59d556a2acfd9296613"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade7883850d2de59d556a2acfd9296613">EMG</a> [<a class="el" href="#a25022864dfc8ec428e7128282e57b136">CHUNK</a> *2]</td></tr>
+<tr class="separator:ade7883850d2de59d556a2acfd9296613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de «define»</h2>
+<a id="a6b20d41d6252e9871430c242cb1a56e7" name="a6b20d41d6252e9871430c242cb1a56e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b20d41d6252e9871430c242cb1a56e7">&#9670;&#160;</a></span>BUFFER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUFFER_SIZE&#160;&#160;&#160;2000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tamaño del vector que contiene los datos de un ECG. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00065">65</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+</div>
+</div>
+<a id="a145103118f6d9d1129aa4509cf214a13" name="a145103118f6d9d1129aa4509cf214a13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a145103118f6d9d1129aa4509cf214a13">&#9670;&#160;</a></span>BUZZER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUZZER&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a4f3bac8a4733f9e96aa952fb1d9b0a7f">GPIO_23</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00085">85</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_therming_e_m_g_8c_source.html#l00230">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a25022864dfc8ec428e7128282e57b136" name="a25022864dfc8ec428e7128282e57b136"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25022864dfc8ec428e7128282e57b136">&#9670;&#160;</a></span>CHUNK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHUNK&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>cantidas de muestars que levanta y analiza </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00078">78</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_therming_e_m_g_8c_source.html#l00139">SonarBuffery_task()</a>.</p>
+
+</div>
+</div>
+<a id="a8e48086ec95b10d9c33a4bd2b21892c9" name="a8e48086ec95b10d9c33a4bd2b21892c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e48086ec95b10d9c33a4bd2b21892c9">&#9670;&#160;</a></span>OCTAVE_OFFSET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OCTAVE_OFFSET&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00082">82</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+</div>
+</div>
+<a id="a1a3c56336e03b5e68030bf8fe8cc87ca" name="a1a3c56336e03b5e68030bf8fe8cc87ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a3c56336e03b5e68030bf8fe8cc87ca">&#9670;&#160;</a></span>PWM_BUZZER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PWM_BUZZER&#160;&#160;&#160;<a class="el" href="group___p_w_m.html#gga5800a2bada92ba802e1cbdb0307f0c7ba44646d1313a5c911c1500447f531f542">PWM_3</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00080">80</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+</div>
+</div>
+<a id="a0de934e7c029888d399e2101aa735387" name="a0de934e7c029888d399e2101aa735387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de934e7c029888d399e2101aa735387">&#9670;&#160;</a></span>PWM_DC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PWM_DC&#160;&#160;&#160;50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00081">81</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+</div>
+</div>
+<a id="a9401e43a8c86acafb31c8e2709baefa1" name="a9401e43a8c86acafb31c8e2709baefa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9401e43a8c86acafb31c8e2709baefa1">&#9670;&#160;</a></span>SAMPLE_FREQ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAMPLE_FREQ&#160;&#160;&#160;200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>definimos frecuencia maxima </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00072">72</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_therming_e_m_g_8c_source.html#l00230">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a8ff4a12879297e69a77292c6052452b5" name="a8ff4a12879297e69a77292c6052452b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ff4a12879297e69a77292c6052452b5">&#9670;&#160;</a></span>T_SENIAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T_SENIAL&#160;&#160;&#160;4000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00073">73</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a630544a7f0a2cc40d8a7fefab7e2fe70" name="a630544a7f0a2cc40d8a7fefab7e2fe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&#160;</a></span>app_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void app_main </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00230">230</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="analog__io__mcu_8h_source.html#l00038">ADC_SINGLE</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00045">AnalogInputInit()</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00095">AnalogOutputInit()</a>, <a class="el" href="_therming_e_m_g_8c_source.html#l00085">BUZZER</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00032">CH1</a>, <a class="el" href="_therming_e_m_g_8c_source.html#l00054">convadc_task_handle</a>, <a class="el" href="_therming_e_m_g_8c_source.html#l00116">FuncTimer()</a>, <a class="el" href="_therming_e_m_g_8c_source.html#l00060">HacerSonar_task_handle</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00049">analog_input_config_t::input</a>, <a class="el" href="ili9341_8c_source.html#l00042">NULL</a>, <a class="el" href="uart__mcu_8h_source.html#l00039">serial_config_t::port</a>, <a class="el" href="_therming_e_m_g_8c_source.html#l00072">SAMPLE_FREQ</a>, <a class="el" href="_therming_e_m_g_8c_source.html#l00139">SonarBuffery_task()</a>, <a class="el" href="timer__mcu_8h_source.html#l00040">timer_config_t::timer</a>, <a class="el" href="timer__mcu_8h_source.html#l00032">TIMER_A</a>, <a class="el" href="timer__mcu_8c_source.html#l00055">TimerInit()</a>, <a class="el" href="timer__mcu_8c_source.html#l00110">TimerStart()</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a> y <a class="el" href="uart__mcu_8c_source.html#l00107">UartInit()</a>.</p>
+
+</div>
+</div>
+<a id="aee17a7cf131f01114b30bd26bda9ea54" name="aee17a7cf131f01114b30bd26bda9ea54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee17a7cf131f01114b30bd26bda9ea54">&#9670;&#160;</a></span>DetermineNoteIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DetermineNoteIndex </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>amplitude</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00220">220</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_therming_e_m_g_8c_source.html#l00067">i</a>, <a class="el" href="_therming_e_m_g_8c_source.html#l00107">NUM_THRESHOLDS</a> y <a class="el" href="_therming_e_m_g_8c_source.html#l00106">THRESHOLDS</a>.</p>
+
+</div>
+</div>
+<a id="ad9278972624167025b4b2910afc9765e" name="ad9278972624167025b4b2910afc9765e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9278972624167025b4b2910afc9765e">&#9670;&#160;</a></span>FuncTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimer </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00116">116</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_therming_e_m_g_8c_source.html#l00054">convadc_task_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_therming_e_m_g_8c_source.html#l00230">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a7abd1c0b0bdd5a062b3a36bf63dd2e9b" name="a7abd1c0b0bdd5a062b3a36bf63dd2e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7abd1c0b0bdd5a062b3a36bf63dd2e9b">&#9670;&#160;</a></span>FuncTimerSenial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimerSenial </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00169">169</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_therming_e_m_g_8c_source.html#l00054">convadc_task_handle</a>.</p>
+
+</div>
+</div>
+<a id="abf7e02de051f4fbf3de810273726e8c3" name="abf7e02de051f4fbf3de810273726e8c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf7e02de051f4fbf3de810273726e8c3">&#9670;&#160;</a></span>RectifySignal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RectifySignal </td>
+          <td>(</td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>EMG</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>output</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00128">128</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_therming_e_m_g_8c_source.html#l00110">EMG</a> y <a class="el" href="_therming_e_m_g_8c_source.html#l00067">i</a>.</p>
+
+</div>
+</div>
+<a id="ad4ae9b90f16162ba6b767a6bd438e8a5" name="ad4ae9b90f16162ba6b767a6bd438e8a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4ae9b90f16162ba6b767a6bd438e8a5">&#9670;&#160;</a></span>SonarBuffery_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SonarBuffery_task </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>funsion utilizada para hacer sonar el buffer a los distintos valores de frecuencia </p>
+<p>() </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00139">139</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_therming_e_m_g_8c_source.html#l00078">CHUNK</a>, <a class="el" href="_therming_e_m_g_8c_source.html#l00067">i</a> y <a class="el" href="_therming_e_m_g_8c_source.html#l00101">notas</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_therming_e_m_g_8c_source.html#l00230">app_main()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="a643ccc8934e222043d612f36325e900c" name="a643ccc8934e222043d612f36325e900c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a643ccc8934e222043d612f36325e900c">&#9670;&#160;</a></span>convadc_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t convadc_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00054">54</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_therming_e_m_g_8c_source.html#l00230">app_main()</a>, <a class="el" href="_therming_e_m_g_8c_source.html#l00116">FuncTimer()</a> y <a class="el" href="_therming_e_m_g_8c_source.html#l00169">FuncTimerSenial()</a>.</p>
+
+</div>
+</div>
+<a id="aa6e451eccf9519b0809baad41f5ab241" name="aa6e451eccf9519b0809baad41f5ab241"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6e451eccf9519b0809baad41f5ab241">&#9670;&#160;</a></span>data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t data</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00066">66</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="i2c__mcu_8c_source.html#l00073">I2C_readBit()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00091">I2C_readBits()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00114">I2C_readByte()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00126">I2C_readBytes()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00260">I2C_readWord()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00172">I2C_writeBit()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00187">I2C_writeBits()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00214">I2C_writeByte()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00236">I2C_writeBytes()</a>, <a class="el" href="i2c__mcu_8c_source.html#l00146">I2C_writeWord()</a>, <a class="el" href="ili9341_8c_source.html#l00380">ILI9341DrawChar()</a>, <a class="el" href="mpu6050_8c_source.html#l02728">MPU6050_getFIFOBytes()</a>, <a class="el" href="mpu6050_8c_source.html#l00025">MPU6050_ReadRegister()</a>, <a class="el" href="mpu6050_8c_source.html#l02739">MPU6050_setFIFOByte()</a>, <a class="el" href="mpu6050_8c_source.html#l01155">MPU6050_setSlave4OutputByte()</a>, <a class="el" href="mpu6050_8c_source.html#l02118">MPU6050_setSlaveOutputByte()</a>, <a class="el" href="uart__mcu_8c_source.html#l00161">UartReadBuffer()</a>, <a class="el" href="uart__mcu_8c_source.html#l00142">UartReadByte()</a>, <a class="el" href="uart__mcu_8c_source.html#l00209">UartSendBuffer()</a>, <a class="el" href="uart__mcu_8c_source.html#l00180">UartSendByte()</a> y <a class="el" href="ili9341_8c_source.html#l00222">WriteLCD()</a>.</p>
+
+</div>
+</div>
+<a id="ade7883850d2de59d556a2acfd9296613" name="ade7883850d2de59d556a2acfd9296613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade7883850d2de59d556a2acfd9296613">&#9670;&#160;</a></span>EMG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t EMG[<a class="el" href="#a25022864dfc8ec428e7128282e57b136">CHUNK</a> *2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00110">110</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_therming_e_m_g_8c_source.html#l00128">RectifySignal()</a>.</p>
+
+</div>
+</div>
+<a id="a5b85fc472953eac39c2629b1f5d68617" name="a5b85fc472953eac39c2629b1f5d68617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b85fc472953eac39c2629b1f5d68617">&#9670;&#160;</a></span>filter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool filter = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00094">94</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gpio__mcu_8c_source.html#l00119">GPIOInputFilter()</a>.</p>
+
+</div>
+</div>
+<a id="a3647c1af364213f87c9b3699813aec18" name="a3647c1af364213f87c9b3699813aec18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3647c1af364213f87c9b3699813aec18">&#9670;&#160;</a></span>HacerSonar_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t HacerSonar_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00060">60</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_therming_e_m_g_8c_source.html#l00230">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="acb559820d9ca11295b4500f179ef6392" name="acb559820d9ca11295b4500f179ef6392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb559820d9ca11295b4500f179ef6392">&#9670;&#160;</a></span>i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int i =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00067">67</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_therming_e_m_g_8c_source.html#l00220">DetermineNoteIndex()</a>, <a class="el" href="ili9341_8c_source.html#l00260">Fill()</a>, <a class="el" href="gpio__fast__out__mcu_8c_source.html#l00034">GPIOFastInit()</a>, <a class="el" href="hx711_8c_source.html#l00081">HX711_read()</a>, <a class="el" href="hx711_8c_source.html#l00117">HX711_readAverage()</a>, <a class="el" href="ili9341_8c_source.html#l00380">ILI9341DrawChar()</a>, <a class="el" href="ili9341_8c_source.html#l00438">ILI9341DrawInt()</a>, <a class="el" href="ili9341_8c_source.html#l00769">ILI9341DrawPicture()</a>, <a class="el" href="ili9341_8c_source.html#l00300">ILI9341Init()</a>, <a class="el" href="neopixel__stripe_8c_source.html#l00055">NeoPixelAllColor()</a>, <a class="el" href="neopixel__stripe_8c_source.html#l00044">NeoPixelAllOff()</a>, <a class="el" href="neopixel__stripe_8c_source.html#l00106">NeoPixelRainbow()</a>, <a class="el" href="neopixel__stripe_8c_source.html#l00067">NeoPixelSetArray()</a>, <a class="el" href="neopixel__stripe_8c_source.html#l00082">NeoPixelShift()</a>, <a class="el" href="_therming_e_m_g_8c_source.html#l00128">RectifySignal()</a>, <a class="el" href="hx711_8c_source.html#l00029">shiftIn()</a>, <a class="el" href="_therming_e_m_g_8c_source.html#l00139">SonarBuffery_task()</a>, <a class="el" href="uart__mcu_8c_source.html#l00222">UartItoa()</a> y <a class="el" href="ws2812b_8c_source.html#l00340">ws2812bSend()</a>.</p>
+
+</div>
+</div>
+<a id="a3eaccb2b65e6eae52fe4d4e66d9f34c5" name="a3eaccb2b65e6eae52fe4d4e66d9f34c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eaccb2b65e6eae52fe4d4e66d9f34c5">&#9670;&#160;</a></span>notas</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int notas[] = {NOTE_C4, NOTE_DS4, NOTE_F4, NOTE_FS4, NOTE_G4, NOTE_AS4, NOTE_C5, NOTE_DS5}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00101">101</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_therming_e_m_g_8c_source.html#l00139">SonarBuffery_task()</a>.</p>
+
+</div>
+</div>
+<a id="a051734f5aad36c2b59dd19d7a6ce4c12" name="a051734f5aad36c2b59dd19d7a6ce4c12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a051734f5aad36c2b59dd19d7a6ce4c12">&#9670;&#160;</a></span>NUM_NOTAS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int NUM_NOTAS = sizeof(<a class="el" href="#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a>) / sizeof(<a class="el" href="#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a>[0])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00103">103</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+</div>
+</div>
+<a id="a458f36562402c03452d85793f502cd88" name="a458f36562402c03452d85793f502cd88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a458f36562402c03452d85793f502cd88">&#9670;&#160;</a></span>NUM_THRESHOLDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int NUM_THRESHOLDS = sizeof(<a class="el" href="#ae127c510837f32a6f503f8f010ebc5fb">THRESHOLDS</a>) / sizeof(<a class="el" href="#ae127c510837f32a6f503f8f010ebc5fb">THRESHOLDS</a>[0])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00107">107</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_therming_e_m_g_8c_source.html#l00220">DetermineNoteIndex()</a>.</p>
+
+</div>
+</div>
+<a id="ae127c510837f32a6f503f8f010ebc5fb" name="ae127c510837f32a6f503f8f010ebc5fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae127c510837f32a6f503f8f010ebc5fb">&#9670;&#160;</a></span>THRESHOLDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float THRESHOLDS[] = {0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_therming_e_m_g_8c_source.html#l00106">106</a> del archivo <a class="el" href="_therming_e_m_g_8c_source.html">ThermingEMG.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_therming_e_m_g_8c_source.html#l00220">DetermineNoteIndex()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_436d476d4883225d50b14e25f9d932c5.html">SchvemerE-1C12024</a></li><li class="navelem"><a class="el" href="dir_4dae760e76e3f8945be3653b1bf2945b.html">firmware</a></li><li class="navelem"><a class="el" href="dir_07979404827261c3106a7b53ed9c6ee6.html">projects</a></li><li class="navelem"><a class="el" href="dir_26d79a7406ed643a03909d0322675a97.html">ThermingEMG</a></li><li class="navelem"><a class="el" href="dir_0151091e0e8b2d1f0f7c5553cf08157f.html">main</a></li><li class="navelem"><a class="el" href="_therming_e_m_g_8c.html">ThermingEMG.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -73,3 +73,4 @@ void app_main(void){ /*es uana funsion que crea tarea, tarea que llama tarea */
 512es un tañano luego tenemos un campo para parsarle parametros que el el Null como no quiero nada 
 y despues ta la prioridad de la tarea(vamos a usar la coperativa, que va a antrar la que tenga la rpioridad mas 
 alta)*/
+

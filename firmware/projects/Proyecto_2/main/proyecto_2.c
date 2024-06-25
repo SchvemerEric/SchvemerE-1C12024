@@ -1,10 +1,14 @@
-/*! @mainpage Template
+/*! @mainpage proyecto 2 
  *
  * @section genDesc General Description
  *
- * This section describes how the program works.
+ *  se desarrolla un sistema capaz de medir distancias utilizando un sensor
+ *  ultrasónico y visualizar el resultado de la medición a través de LEDs y un display LCD. 
+ *  Además, se implementa la funcionalidad de controlar la medición 
+ *  utilizando dos teclas (TEC1 y TEC2) para iniciar/detener la medición 
+ *  y mantener el resultado respectivamente.
  *
- * <a href="https://drive.google.com/...">Operation Example</a>
+ * 
  *
  * @section hardConn Hardware Connection
  *
@@ -14,12 +18,13 @@
  *
  *
  * @section changelog Changelog
- *
- * |   Date	    | Description                                    |
+  * |   Date	    | Description                                    |
  * |:----------:|:-----------------------------------------------|
- * | 12/09/2023 | Document creation		                         |
+ * | 10/04/2024 | Comienza el archivo                            |
+ * | 8/06/2024 | Finaliza la documentación         |
  *
- * @author Albano Peñalva (albano.penalva@uner.edu.ar)
+ *
+ * @author schvemer Eric 
  *
  */
 
@@ -36,53 +41,99 @@
 #include <hc_sr04.h>
 #include "delay_mcu.h"
 /*==================[macros and definitions]=================================*/
+/** @def REFRESCO_MEDICION
+ * @brief Representa el tiempo en microsegundos que se utilizará para dar un delay a la tarea mosttrar distancia
+ * 
+*/
+#define CONFIG_BLINK_PERIOD_1 1000
+
+/** @def CONFIG_BLINK_PERIOD_2
+ * @brief Representa el tiempo en microsegundos que se utilizará para dar un delay a la tarea switchTeclas_task
+ * 
+*/
+//switchTeclas_task
+
+#define CONFIG_BLINK_PERIOD_2 50
 
 /*==================[internal data definition]===============================*/
+/**
+ * @def on
+ * @brief Variable global de tipo booleana que almacena el estado de encendido del sistema de medición
+*/
 bool on; 
+/**
+ * @def off
+ * @brief Variable global de tipo booleana que almacena el estado de apagado del sistema de medición
+*/
 bool off; 
-uint16_t d; 
 
-bool tecla_1; 
-bool tecla_2; 
-
-#define CONFIG_BLINK_PERIOD 1000
-
+bool tecla_1= false;  /*/uso para activar y desactivar la medicion*/ //puedo usar un star t1 y hold t2 
+bool tecla_2= false ;  /*uso para mantener el estado de HOLD*/
+/**
+ * @def distancia
+ * @brief Variable global entera sin signo que almacena la distancia medida por el sensor de ultrasonido
+*/
+uint16_t distancia; 
 /*==================[internal functions declaration]=========================*/
+/**
+ * @brief Tarea que permite realizar las mediciones  y mostrar la distancia con el sensor de ultrasonido
+*/
 
-void distancias_task(void *pvParameter){
+void MostrarDistancias_task(void *pvParameter){
+			uint16_t distancia=0; 
+
 	while (1)
 	{
-		uint16_t distancia; 
-		distancia= HcSr04ReadDistanceInCentimeters(); 
-		LcdItsE0803Write(distancia); //aca llamamos a la pantalla del lcd
+		
+		if (tecla_1)
+		{
 
-		if (distancia < 10)
-		{
-			LedsOffAll(); 
+			distancia = HcSr04ReadDistanceInCentimeters();
+			if (!tecla_2)
+			{								 // si no apreto la tecla2
+				LcdItsE0803Write(distancia); // pantalla LCD
+			}
+
+			if (distancia < 10)
+			{
+				LedsOffAll();
+			}
+
+			else if (distancia > 10 && distancia < 20)
+			{
+				LedOn(LED_1);
+				LedOff(LED_2);
+				LedOff(LED_3);
+			}
+
+			else if (distancia > 20 && distancia < 30)
+			{
+				LedOn(LED_1);
+				LedOn(LED_2);
+				LedOff(LED_3);
+			}
+
+			else if (distancia > 30)
+			{
+				LedOn(LED_1);
+				LedOn(LED_2);
+				LedOn(LED_3);
+			}
 		}
-		else if (distancia>10 && distancia<20)
+		
+		else
 		{
-			LedOn(LED_1);
-			LedOff(LED_2);
-			LedOff(LED_3);
+			LcdItsE0803Off();
+			LedsOffAll();
 		}
-		else if (distancia>20 && distancia<30)
-		{
-			
-			LedOn(LED_1);
-			LedOn(LED_2);
-			LedOff(LED_3);
-		}
-		else if (distancia>30)
-		{
-			LedOn(LED_1);
-			LedOn(LED_2);
-			LedOn(LED_3);
-		}
-        vTaskDelay(CONFIG_BLINK_PERIOD / portTICK_PERIOD_MS);
+
+		vTaskDelay(CONFIG_BLINK_PERIOD_1/ portTICK_PERIOD_MS);
 	}
-	
 }
+
+/**
+ * @brief Tarea que permite realizar el control de la aplicacion mediante las teclas que se detecten como pulsadas
+*/
 
 void switchTeclas_task(void* PvParameter){
 	uint8_t teclas; 
@@ -91,14 +142,16 @@ void switchTeclas_task(void* PvParameter){
 		teclas=SwitchesRead(); 
 		switch(teclas){
 			case SWITCH_1: 
-			tecla_1 true; 
-		break; 
-			case SWITCH_2: 
-			tecla_2 true; 
-		break; 
+			// TEC1 para activar y detener la medición
+			tecla_1 = !tecla_1;
+			break;
+			case SWITCH_2:
+			// TEC2 para mantener el resultado (“HOLD”)
+			tecla_2 = !tecla_2;
+			break;
 	
 		}
-	vTaskDelay(CONFIG_BLINK_PERIOD/portTICK_PERIOD_MS)
+	vTaskDelay(CONFIG_BLINK_PERIOD_2/portTICK_PERIOD_MS);
 
 	}
 	
@@ -106,13 +159,16 @@ void switchTeclas_task(void* PvParameter){
 
 /*==================[external functions definition]==========================*/
 void app_main(void){
-LedsInit();
-LcdItsE0803Init(); 
-HcSr04Deinit(); 
-SwitchesInit(); 
-xTaskCreate(& distancias_task, "distancias_task", 512, NULL,5,NULL);
-xTaskCreate(& switchTeclas_task, "switchTeclas_task", 512, NULL,5,NULL);
-}
+
+	HcSr04Init(GPIO_3, GPIO_2);
+	LedsInit();
+	SwitchesInit();
+	LcdItsE0803Init();
+
+	xTaskCreate(&MostrarDistancias_task, "MostrarDistancias_task", 512, NULL, 5, NULL);
+	xTaskCreate(&switchTeclas_task, "switchTeclas_task", 512, NULL, 5, NULL);
 
 }
+
+
 /*==================[end of file]============================================*/

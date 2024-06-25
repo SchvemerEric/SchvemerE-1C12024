@@ -1,26 +1,20 @@
 {
     "configurations": [
         {
-            "name": "ESP-IDF",
-            "compilerPath": "C:\\Usuarios\\PC\\.espressif\\tools\\riscv32-esp-elf\\esp-12.2.0_20230208\\riscv32-esp-elf\\bin\\riscv32-esp-elf-gcc.exe",
+            "name": "Win32",
             "includePath": [
-                "${config:idf.espIdfPath}/components/**",
-                "${config:idf.espIdfPathWin}/components/**",
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/../../drivers/microcontroller/**",
-                "${workspaceFolder}/../../drivers/devices/**"
+                "C:/Users/Eric/v5.2.1/esp-idf/components/freertos/FreeRTOS-Kernel-SMP/include"
             ],
-            "browse": {
-                "path": [
-                    "${config:idf.espIdfPath}/components",
-                    "${config:idf.espIdfPathWin}/components",
-                    "${workspaceFolder}/**",
-                    "${workspaceFolder}/../../drivers/microcontroller/**",
-                    "${workspaceFolder}/../../drivers/devices/**"
-                ],
-                "limitSymbolsToIncludedHeaders": false
-            },
-            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\Users\\Eric\\.espressif\\tools\\riscv32-esp-elf\\esp-13.2.0_20230928\\riscv32-esp-elf\\bin\\riscv32-esp-elf-g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "windows-gcc-x64"
         }
     ],
     "version": 4

@@ -1,0 +1,27 @@
+var _therming_e_m_g_8c =
+[
+    [ "BUFFER_SIZE", "_therming_e_m_g_8c.html#a6b20d41d6252e9871430c242cb1a56e7", null ],
+    [ "BUZZER", "_therming_e_m_g_8c.html#a145103118f6d9d1129aa4509cf214a13", null ],
+    [ "CHUNK", "_therming_e_m_g_8c.html#a25022864dfc8ec428e7128282e57b136", null ],
+    [ "OCTAVE_OFFSET", "_therming_e_m_g_8c.html#a8e48086ec95b10d9c33a4bd2b21892c9", null ],
+    [ "PWM_BUZZER", "_therming_e_m_g_8c.html#a1a3c56336e03b5e68030bf8fe8cc87ca", null ],
+    [ "PWM_DC", "_therming_e_m_g_8c.html#a0de934e7c029888d399e2101aa735387", null ],
+    [ "SAMPLE_FREQ", "_therming_e_m_g_8c.html#a9401e43a8c86acafb31c8e2709baefa1", null ],
+    [ "T_SENIAL", "_therming_e_m_g_8c.html#a8ff4a12879297e69a77292c6052452b5", null ],
+    [ "app_main", "_therming_e_m_g_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70", null ],
+    [ "DetermineNoteIndex", "_therming_e_m_g_8c.html#aee17a7cf131f01114b30bd26bda9ea54", null ],
+    [ "FuncTimer", "_therming_e_m_g_8c.html#ad9278972624167025b4b2910afc9765e", null ],
+    [ "FuncTimerSenial", "_therming_e_m_g_8c.html#a7abd1c0b0bdd5a062b3a36bf63dd2e9b", null ],
+    [ "RectifySignal", "_therming_e_m_g_8c.html#abf7e02de051f4fbf3de810273726e8c3", null ],
+    [ "SonarBuffery_task", "_therming_e_m_g_8c.html#ad4ae9b90f16162ba6b767a6bd438e8a5", null ],
+    [ "convadc_task_handle", "_therming_e_m_g_8c.html#a643ccc8934e222043d612f36325e900c", null ],
+    [ "data", "_therming_e_m_g_8c.html#aa6e451eccf9519b0809baad41f5ab241", null ],
+    [ "EMG", "_therming_e_m_g_8c.html#ade7883850d2de59d556a2acfd9296613", null ],
+    [ "filter", "_therming_e_m_g_8c.html#a5b85fc472953eac39c2629b1f5d68617", null ],
+    [ "HacerSonar_task_handle", "_therming_e_m_g_8c.html#a3647c1af364213f87c9b3699813aec18", null ],
+    [ "i", "_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392", null ],
+    [ "notas", "_therming_e_m_g_8c.html#a3eaccb2b65e6eae52fe4d4e66d9f34c5", null ],
+    [ "NUM_NOTAS", "_therming_e_m_g_8c.html#a051734f5aad36c2b59dd19d7a6ce4c12", null ],
+    [ "NUM_THRESHOLDS", "_therming_e_m_g_8c.html#a458f36562402c03452d85793f502cd88", null ],
+    [ "THRESHOLDS", "_therming_e_m_g_8c.html#ae127c510837f32a6f503f8f010ebc5fb", null ]
+];

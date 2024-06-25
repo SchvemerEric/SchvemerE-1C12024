@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>proyecto 2 Actividad 4: Archivo de código fuente C:/Repositorios/SchvemerE-1C12024/firmware/projects/ThermingEMG/main/ThermingEMG.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">proyecto 2 Actividad 4<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">visualizacion de digitos en pantalla led</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_therming_e_m_g_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ThermingEMG.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_therming_e_m_g_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">/*==================[inclusions]=============================================*/</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;math.h&gt;</span> <span class="comment">// Incluir la biblioteca para usar fabs</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;freertos/FreeRTOS.h&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;freertos/task.h&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;<a class="code" href="led_8h.html">led.h</a>&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &quot;<a class="code" href="switch_8h.html">switch.h</a>&quot;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &quot;<a class="code" href="gpio__mcu_8h.html">gpio_mcu.h</a>&quot;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &quot;<a class="code" href="lcditse0803_8h.html">lcditse0803.h</a>&quot;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;<a class="code" href="hc__sr04_8h.html">hc_sr04.h</a>&gt;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &quot;<a class="code" href="delay__mcu_8h.html">delay_mcu.h</a>&quot;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &quot;<a class="code" href="timer__mcu_8h.html">timer_mcu.h</a>&quot;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &quot;<a class="code" href="uart__mcu_8h.html">uart_mcu.h</a>&quot;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &quot;<a class="code" href="analog__io__mcu_8h.html">analog_io_mcu.h</a>&quot;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#include &quot;iir_filter.h&quot;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#include &quot;buzzer.h&quot;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">/*==================[macros and definitions]=================================*/</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a643ccc8934e222043d612f36325e900c">   54</a></span>TaskHandle_t <a class="code hl_variable" href="_therming_e_m_g_8c.html#a643ccc8934e222043d612f36325e900c">convadc_task_handle</a> = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a3647c1af364213f87c9b3699813aec18">   60</a></span>TaskHandle_t <a class="code hl_variable" href="_therming_e_m_g_8c.html#a3647c1af364213f87c9b3699813aec18">HacerSonar_task_handle</a>= <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a6b20d41d6252e9871430c242cb1a56e7">   65</a></span><span class="preprocessor">#define BUFFER_SIZE 2000</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#aa6e451eccf9519b0809baad41f5ab241">   66</a></span>uint16_t <a class="code hl_variable" href="_therming_e_m_g_8c.html#aa6e451eccf9519b0809baad41f5ab241">data</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">   67</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>=0; </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a9401e43a8c86acafb31c8e2709baefa1">   72</a></span><span class="preprocessor">#define SAMPLE_FREQ         200</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a8ff4a12879297e69a77292c6052452b5">   73</a></span><span class="preprocessor">#define T_SENIAL            4000 </span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a25022864dfc8ec428e7128282e57b136">   78</a></span><span class="preprocessor">#define CHUNK               4 </span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a1a3c56336e03b5e68030bf8fe8cc87ca">   80</a></span><span class="preprocessor">#define PWM_BUZZER      PWM_3</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a0de934e7c029888d399e2101aa735387">   81</a></span><span class="preprocessor">#define PWM_DC          50</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a8e48086ec95b10d9c33a4bd2b21892c9">   82</a></span><span class="preprocessor">#define OCTAVE_OFFSET   0</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a145103118f6d9d1129aa4509cf214a13">   85</a></span><span class="preprocessor">#define BUZZER GPIO_23</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">/*==================[internal data definition]===============================*/</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">static</span> <span class="keywordtype">float</span> EMG_filt[<a class="code hl_define" href="_therming_e_m_g_8c.html#a25022864dfc8ec428e7128282e57b136">CHUNK</a>];</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a5b85fc472953eac39c2629b1f5d68617">   94</a></span><span class="keywordtype">bool</span> <a class="code hl_variable" href="_therming_e_m_g_8c.html#a5b85fc472953eac39c2629b1f5d68617">filter</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">// Definir las notas que se utilizarán</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a3eaccb2b65e6eae52fe4d4e66d9f34c5">  101</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="_therming_e_m_g_8c.html#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a>[] = {NOTE_C4, NOTE_DS4, NOTE_F4, NOTE_FS4, NOTE_G4, NOTE_AS4, NOTE_C5, NOTE_DS5}; <span class="comment">// Escala blues DO</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a051734f5aad36c2b59dd19d7a6ce4c12">  103</a></span><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="_therming_e_m_g_8c.html#a051734f5aad36c2b59dd19d7a6ce4c12">NUM_NOTAS</a> = <span class="keyword">sizeof</span>(<a class="code hl_variable" href="_therming_e_m_g_8c.html#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a>) / <span class="keyword">sizeof</span>(<a class="code hl_variable" href="_therming_e_m_g_8c.html#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a>[0]);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">// Definir umbrales de amplitud</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#ae127c510837f32a6f503f8f010ebc5fb">  106</a></span><span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="_therming_e_m_g_8c.html#ae127c510837f32a6f503f8f010ebc5fb">THRESHOLDS</a>[] = {0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0}; <span class="comment">// Umbrales de amplitud</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a458f36562402c03452d85793f502cd88">  107</a></span><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="_therming_e_m_g_8c.html#a458f36562402c03452d85793f502cd88">NUM_THRESHOLDS</a> = <span class="keyword">sizeof</span>(<a class="code hl_variable" href="_therming_e_m_g_8c.html#ae127c510837f32a6f503f8f010ebc5fb">THRESHOLDS</a>) / <span class="keyword">sizeof</span>(<a class="code hl_variable" href="_therming_e_m_g_8c.html#ae127c510837f32a6f503f8f010ebc5fb">THRESHOLDS</a>[0]);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">/*==================[internal functions declaration]=========================*/</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#ade7883850d2de59d556a2acfd9296613">  110</a></span>uint16_t <a class="code hl_variable" href="_therming_e_m_g_8c.html#ade7883850d2de59d556a2acfd9296613">EMG</a>[<a class="code hl_define" href="_therming_e_m_g_8c.html#a25022864dfc8ec428e7128282e57b136">CHUNK</a>*2];</div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#ad9278972624167025b4b2910afc9765e">  116</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_therming_e_m_g_8c.html#ad9278972624167025b4b2910afc9765e">FuncTimer</a>(<span class="keywordtype">void</span> *param)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>{</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    vTaskNotifyGiveFromISR(<a class="code hl_variable" href="_therming_e_m_g_8c.html#a643ccc8934e222043d612f36325e900c">convadc_task_handle</a>, pdFALSE); <span class="comment">/* Envía una notificación de la tarea a medir*/</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
+</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="foldopen" id="foldopen00128" data-start="{" data-end="}">
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#abf7e02de051f4fbf3de810273726e8c3">  128</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_therming_e_m_g_8c.html#abf7e02de051f4fbf3de810273726e8c3">RectifySignal</a>(<span class="keywordtype">float</span>* <a class="code hl_variable" href="_therming_e_m_g_8c.html#ade7883850d2de59d556a2acfd9296613">EMG</a>, <span class="keywordtype">float</span>* output, <span class="keywordtype">size_t</span> length) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; length; <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>++) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        output[<a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] = fabs(<a class="code hl_variable" href="_therming_e_m_g_8c.html#ade7883850d2de59d556a2acfd9296613">EMG</a>[<a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>]); <span class="comment">// Convertir valores negativos a positivos y guardar en output</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>}</div>
+</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#ad4ae9b90f16162ba6b767a6bd438e8a5">  139</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_therming_e_m_g_8c.html#ad4ae9b90f16162ba6b767a6bd438e8a5">SonarBuffery_task</a>() {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    uint16_t <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0;  <span class="comment">// Declare the variable outside the loop</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="keywordflow">while</span> (1)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>{</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment">//valores procesados de emg filt?? compara valores de amplitud o voltaje</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code hl_define" href="_therming_e_m_g_8c.html#a25022864dfc8ec428e7128282e57b136">CHUNK</a>; <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>++) {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordflow">if</span> (EMG_filt[<a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] &lt; 150) {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        BuzzerSetFrec(<a class="code hl_variable" href="_therming_e_m_g_8c.html#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a>[0]);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (EMG_filt[<a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] &lt; 200) {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        BuzzerSetFrec(<a class="code hl_variable" href="_therming_e_m_g_8c.html#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a>[1]);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (EMG_filt[<a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] &lt; 250) {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        BuzzerSetFrec(<a class="code hl_variable" href="_therming_e_m_g_8c.html#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a>[2]);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (EMG_filt[<a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] &lt; 300) {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        BuzzerSetFrec(<a class="code hl_variable" href="_therming_e_m_g_8c.html#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a>[3]);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (EMG_filt[<a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] &lt; 350) {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        BuzzerSetFrec(<a class="code hl_variable" href="_therming_e_m_g_8c.html#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a>[4]);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (EMG_filt[<a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] &lt; 400) {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        BuzzerSetFrec(<a class="code hl_variable" href="_therming_e_m_g_8c.html#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a>[5]);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (EMG_filt[<a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] &lt; 450) {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        BuzzerSetFrec(<a class="code hl_variable" href="_therming_e_m_g_8c.html#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a>[6]);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(EMG_filt[<a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>]&lt;500) {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        BuzzerSetFrec(<a class="code hl_variable" href="_therming_e_m_g_8c.html#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a>[7]);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    }<span class="keywordflow">else</span> {}</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    BuzzerOn();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    vTaskDelay(1000/ portTICK_PERIOD_MS);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>}}</div>
+</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="foldopen" id="foldopen00169" data-start="{" data-end="}">
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a7abd1c0b0bdd5a062b3a36bf63dd2e9b">  169</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_therming_e_m_g_8c.html#a7abd1c0b0bdd5a062b3a36bf63dd2e9b">FuncTimerSenial</a>(<span class="keywordtype">void</span>* param){<span class="comment">//notifico la tarea</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    xTaskNotifyGive(<a class="code hl_variable" href="_therming_e_m_g_8c.html#a643ccc8934e222043d612f36325e900c">convadc_task_handle</a>);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>}</div>
+</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="keyword">static</span> <span class="keywordtype">void</span> Filtrar_EMG_task(<span class="keywordtype">void</span> *pvParameter){</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordtype">char</span> msg[128];</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keywordtype">char</span> msg_chunk[24];</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keyword">static</span> uint8_t indice = 0;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        ulTaskNotifyTake(pdTRUE, portMAX_DELAY);   </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <a class="code hl_function" href="group___analog___i_o.html#gab5ae00a35744f407072230979e593fd9">AnalogInputReadSingle</a>(<a class="code hl_enumvalue" href="group___analog___i_o.html#gga4ebdf50515e5d73c58c24fd1491770dca703cf81b7a9530ba8650e0ee2f29d68e">CH1</a>, &amp;<a class="code hl_variable" href="_therming_e_m_g_8c.html#ade7883850d2de59d556a2acfd9296613">EMG</a>[indice]);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>       indice++;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="comment">//printf(&quot;%d\n&quot;, indice);</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <span class="keywordflow">if</span>(indice &gt;= <a class="code hl_define" href="_therming_e_m_g_8c.html#a25022864dfc8ec428e7128282e57b136">CHUNK</a>){</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            <span class="keywordflow">for</span>(uint8_t <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code hl_define" href="_therming_e_m_g_8c.html#a25022864dfc8ec428e7128282e57b136">CHUNK</a>; <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>++){</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                EMG_filt[<a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] = <a class="code hl_variable" href="_therming_e_m_g_8c.html#ade7883850d2de59d556a2acfd9296613">EMG</a>[<a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>];<span class="comment">//le asigno dato flotante </span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            }</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            HiPassFilter(EMG_filt, EMG_filt, <a class="code hl_define" href="_therming_e_m_g_8c.html#a25022864dfc8ec428e7128282e57b136">CHUNK</a>);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <a class="code hl_function" href="_therming_e_m_g_8c.html#abf7e02de051f4fbf3de810273726e8c3">RectifySignal</a>(EMG_filt,EMG_filt,<a class="code hl_define" href="_therming_e_m_g_8c.html#a25022864dfc8ec428e7128282e57b136">CHUNK</a>);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            LowPassFilter(EMG_filt, EMG_filt, <a class="code hl_define" href="_therming_e_m_g_8c.html#a25022864dfc8ec428e7128282e57b136">CHUNK</a>);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            strcpy(msg, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <span class="keywordflow">for</span>(uint8_t <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code hl_define" href="_therming_e_m_g_8c.html#a25022864dfc8ec428e7128282e57b136">CHUNK</a>; <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>++){</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                <span class="comment">//CheckAndSetFrequency(EMG_filt[i]);  // Verificar la amplitud y establecer la frecuencia</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                sprintf(msg_chunk, <span class="stringliteral">&quot;%.2f\r&quot;</span>, EMG_filt[<a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>]);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                strcat(msg, msg_chunk);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, msg);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            indice = 0;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        } <span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        } </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="comment">// Comprobar la amplitud y ajustar la frecuencia</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    }</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>}</div>
+<div class="foldopen" id="foldopen00220" data-start="{" data-end="}">
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#aee17a7cf131f01114b30bd26bda9ea54">  220</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="_therming_e_m_g_8c.html#aee17a7cf131f01114b30bd26bda9ea54">DetermineNoteIndex</a>(<span class="keywordtype">float</span> amplitude) {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code hl_variable" href="_therming_e_m_g_8c.html#a458f36562402c03452d85793f502cd88">NUM_THRESHOLDS</a>; <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>++) {</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="keywordflow">if</span> (amplitude &lt; <a class="code hl_variable" href="_therming_e_m_g_8c.html#ae127c510837f32a6f503f8f010ebc5fb">THRESHOLDS</a>[<a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>]) {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        }</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    }</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="_therming_e_m_g_8c.html#a458f36562402c03452d85793f502cd88">NUM_THRESHOLDS</a> - 1; <span class="comment">// Nota más alta si supera todos los umbrales</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>}</div>
+</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="comment">/*==================[external functions definition]==========================*/</span></div>
+<div class="foldopen" id="foldopen00230" data-start="{" data-end="}">
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="_therming_e_m_g_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">  230</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_therming_e_m_g_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>BuzzerInit(<a class="code hl_define" href="_therming_e_m_g_8c.html#a145103118f6d9d1129aa4509cf214a13">BUZZER</a>);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>HiPassInit(<a class="code hl_define" href="_therming_e_m_g_8c.html#a9401e43a8c86acafb31c8e2709baefa1">SAMPLE_FREQ</a>, 0.1, ORDER_2);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>LowPassInit(<a class="code hl_define" href="_therming_e_m_g_8c.html#a9401e43a8c86acafb31c8e2709baefa1">SAMPLE_FREQ</a>, 5, ORDER_2);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><a class="code hl_struct" href="structanalog__input__config__t.html">analog_input_config_t</a> analog = {</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        .<a class="code hl_variable" href="structanalog__input__config__t.html#a16d10b35d778a5d4fdbda4d75981d310">input</a> = <a class="code hl_enumvalue" href="group___analog___i_o.html#gga4ebdf50515e5d73c58c24fd1491770dca703cf81b7a9530ba8650e0ee2f29d68e">CH1</a>, <span class="comment">//le paso el canal</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        .mode = <a class="code hl_enumvalue" href="group___analog___i_o.html#gga51acd785c14953090a3507d4fa8e5939a3b0a8cf9a7759ea8b7c9494eb7fb3dd4">ADC_SINGLE</a>,</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        .func_p = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        .param_p = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        .sample_frec = 0</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>};</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><a class="code hl_function" href="group___analog___i_o.html#ga24ce5556aa4682468220b982f151cdfe">AnalogInputInit</a>(&amp;analog); <span class="comment">//inicializo</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><a class="code hl_struct" href="structtimer__config__t.html">timer_config_t</a> timer_1 = {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            .<a class="code hl_variable" href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer</a> = <a class="code hl_enumvalue" href="group___timer.html#ggacc4e64394d03a6e790f8e52c674534d9a179b1231f027eba52fa4ef94ec174598">TIMER_A</a>,</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            .period = 2000,</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            .func_p = <a class="code hl_function" href="_therming_e_m_g_8c.html#ad9278972624167025b4b2910afc9765e">FuncTimer</a>,</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            .param_p = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>};</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><a class="code hl_function" href="group___timer.html#gae8617c0d176463a60441464ad26563f6">TimerInit</a>(&amp;timer_1);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="comment">//podes ponerle una opcion que te cambie la escala de notas</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><a class="code hl_struct" href="structserial__config__t.html">serial_config_t</a> my_uart = {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        .<a class="code hl_variable" href="structserial__config__t.html#a27067c816e8c5402c7be0da9780678b0">port</a> = <a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        .baud_rate = 115200, <span class="comment">//ver este tiempo </span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        .func_p = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        .param_p = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>};</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><a class="code hl_function" href="group___u_a_r_t.html#ga440f6a03dfd8b310f5fdf42c3bf20c42">UartInit</a>(&amp;my_uart);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><a class="code hl_function" href="group___analog___i_o.html#gab57399e946247652a096a0e2d3a1b69a">AnalogOutputInit</a>(); <span class="comment">//ini la salida</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>xTaskCreate(&amp;Filtrar_EMG_task, <span class="stringliteral">&quot;Filtros&quot;</span>, 8000, <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, 4, &amp;<a class="code hl_variable" href="_therming_e_m_g_8c.html#a643ccc8934e222043d612f36325e900c">convadc_task_handle</a>);</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>xTaskCreate(&amp;<a class="code hl_function" href="_therming_e_m_g_8c.html#ad4ae9b90f16162ba6b767a6bd438e8a5">SonarBuffery_task</a>, <span class="stringliteral">&quot;buffer&quot;</span>, 8000, <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, 5, &amp;<a class="code hl_variable" href="_therming_e_m_g_8c.html#a3647c1af364213f87c9b3699813aec18">HacerSonar_task_handle</a>);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><a class="code hl_function" href="group___timer.html#ga0b1779c5b8f91cc83c8bfd127071ea2f">TimerStart</a>(timer_1.<a class="code hl_variable" href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer</a>);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>}</div>
+</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="comment">/*==================[end of file]============================================*/</span></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_a051734f5aad36c2b59dd19d7a6ce4c12"><div class="ttname"><a href="_therming_e_m_g_8c.html#a051734f5aad36c2b59dd19d7a6ce4c12">NUM_NOTAS</a></div><div class="ttdeci">const int NUM_NOTAS</div><div class="ttdef"><b>Definition</b> <a href="#l00103">ThermingEMG.c:103</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_a145103118f6d9d1129aa4509cf214a13"><div class="ttname"><a href="_therming_e_m_g_8c.html#a145103118f6d9d1129aa4509cf214a13">BUZZER</a></div><div class="ttdeci">#define BUZZER</div><div class="ttdef"><b>Definition</b> <a href="#l00085">ThermingEMG.c:85</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_a25022864dfc8ec428e7128282e57b136"><div class="ttname"><a href="_therming_e_m_g_8c.html#a25022864dfc8ec428e7128282e57b136">CHUNK</a></div><div class="ttdeci">#define CHUNK</div><div class="ttdoc">cantidas de muestars que levanta y analiza</div><div class="ttdef"><b>Definition</b> <a href="#l00078">ThermingEMG.c:78</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_a3647c1af364213f87c9b3699813aec18"><div class="ttname"><a href="_therming_e_m_g_8c.html#a3647c1af364213f87c9b3699813aec18">HacerSonar_task_handle</a></div><div class="ttdeci">TaskHandle_t HacerSonar_task_handle</div><div class="ttdef"><b>Definition</b> <a href="#l00060">ThermingEMG.c:60</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_a3eaccb2b65e6eae52fe4d4e66d9f34c5"><div class="ttname"><a href="_therming_e_m_g_8c.html#a3eaccb2b65e6eae52fe4d4e66d9f34c5">notas</a></div><div class="ttdeci">int notas[]</div><div class="ttdef"><b>Definition</b> <a href="#l00101">ThermingEMG.c:101</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_a458f36562402c03452d85793f502cd88"><div class="ttname"><a href="_therming_e_m_g_8c.html#a458f36562402c03452d85793f502cd88">NUM_THRESHOLDS</a></div><div class="ttdeci">const int NUM_THRESHOLDS</div><div class="ttdef"><b>Definition</b> <a href="#l00107">ThermingEMG.c:107</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_a5b85fc472953eac39c2629b1f5d68617"><div class="ttname"><a href="_therming_e_m_g_8c.html#a5b85fc472953eac39c2629b1f5d68617">filter</a></div><div class="ttdeci">bool filter</div><div class="ttdef"><b>Definition</b> <a href="#l00094">ThermingEMG.c:94</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_a630544a7f0a2cc40d8a7fefab7e2fe70"><div class="ttname"><a href="_therming_e_m_g_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a></div><div class="ttdeci">void app_main(void)</div><div class="ttdef"><b>Definition</b> <a href="#l00230">ThermingEMG.c:230</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_a643ccc8934e222043d612f36325e900c"><div class="ttname"><a href="_therming_e_m_g_8c.html#a643ccc8934e222043d612f36325e900c">convadc_task_handle</a></div><div class="ttdeci">TaskHandle_t convadc_task_handle</div><div class="ttdef"><b>Definition</b> <a href="#l00054">ThermingEMG.c:54</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_a7abd1c0b0bdd5a062b3a36bf63dd2e9b"><div class="ttname"><a href="_therming_e_m_g_8c.html#a7abd1c0b0bdd5a062b3a36bf63dd2e9b">FuncTimerSenial</a></div><div class="ttdeci">void FuncTimerSenial(void *param)</div><div class="ttdef"><b>Definition</b> <a href="#l00169">ThermingEMG.c:169</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_a9401e43a8c86acafb31c8e2709baefa1"><div class="ttname"><a href="_therming_e_m_g_8c.html#a9401e43a8c86acafb31c8e2709baefa1">SAMPLE_FREQ</a></div><div class="ttdeci">#define SAMPLE_FREQ</div><div class="ttdoc">definimos frecuencia maxima</div><div class="ttdef"><b>Definition</b> <a href="#l00072">ThermingEMG.c:72</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_aa6e451eccf9519b0809baad41f5ab241"><div class="ttname"><a href="_therming_e_m_g_8c.html#aa6e451eccf9519b0809baad41f5ab241">data</a></div><div class="ttdeci">uint16_t data</div><div class="ttdef"><b>Definition</b> <a href="#l00066">ThermingEMG.c:66</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_abf7e02de051f4fbf3de810273726e8c3"><div class="ttname"><a href="_therming_e_m_g_8c.html#abf7e02de051f4fbf3de810273726e8c3">RectifySignal</a></div><div class="ttdeci">void RectifySignal(float *EMG, float *output, size_t length)</div><div class="ttdef"><b>Definition</b> <a href="#l00128">ThermingEMG.c:128</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="_therming_e_m_g_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition</b> <a href="#l00067">ThermingEMG.c:67</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_ad4ae9b90f16162ba6b767a6bd438e8a5"><div class="ttname"><a href="_therming_e_m_g_8c.html#ad4ae9b90f16162ba6b767a6bd438e8a5">SonarBuffery_task</a></div><div class="ttdeci">void SonarBuffery_task()</div><div class="ttdoc">funsion utilizada para hacer sonar el buffer a los distintos valores de frecuencia</div><div class="ttdef"><b>Definition</b> <a href="#l00139">ThermingEMG.c:139</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_ad9278972624167025b4b2910afc9765e"><div class="ttname"><a href="_therming_e_m_g_8c.html#ad9278972624167025b4b2910afc9765e">FuncTimer</a></div><div class="ttdeci">void FuncTimer(void *param)</div><div class="ttdef"><b>Definition</b> <a href="#l00116">ThermingEMG.c:116</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_ade7883850d2de59d556a2acfd9296613"><div class="ttname"><a href="_therming_e_m_g_8c.html#ade7883850d2de59d556a2acfd9296613">EMG</a></div><div class="ttdeci">uint16_t EMG[CHUNK *2]</div><div class="ttdef"><b>Definition</b> <a href="#l00110">ThermingEMG.c:110</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_ae127c510837f32a6f503f8f010ebc5fb"><div class="ttname"><a href="_therming_e_m_g_8c.html#ae127c510837f32a6f503f8f010ebc5fb">THRESHOLDS</a></div><div class="ttdeci">const float THRESHOLDS[]</div><div class="ttdef"><b>Definition</b> <a href="#l00106">ThermingEMG.c:106</a></div></div>
+<div class="ttc" id="a_therming_e_m_g_8c_html_aee17a7cf131f01114b30bd26bda9ea54"><div class="ttname"><a href="_therming_e_m_g_8c.html#aee17a7cf131f01114b30bd26bda9ea54">DetermineNoteIndex</a></div><div class="ttdeci">int DetermineNoteIndex(float amplitude)</div><div class="ttdef"><b>Definition</b> <a href="#l00220">ThermingEMG.c:220</a></div></div>
+<div class="ttc" id="aanalog__io__mcu_8h_html"><div class="ttname"><a href="analog__io__mcu_8h.html">analog_io_mcu.h</a></div></div>
+<div class="ttc" id="adelay__mcu_8h_html"><div class="ttname"><a href="delay__mcu_8h.html">delay_mcu.h</a></div></div>
+<div class="ttc" id="agpio__mcu_8h_html"><div class="ttname"><a href="gpio__mcu_8h.html">gpio_mcu.h</a></div></div>
+<div class="ttc" id="agroup___analog___i_o_html_ga24ce5556aa4682468220b982f151cdfe"><div class="ttname"><a href="group___analog___i_o.html#ga24ce5556aa4682468220b982f151cdfe">AnalogInputInit</a></div><div class="ttdeci">void AnalogInputInit(analog_input_config_t *config)</div><div class="ttdoc">Analog input initialization.</div><div class="ttdef"><b>Definition</b> <a href="analog__io__mcu_8c_source.html#l00045">analog_io_mcu.c:45</a></div></div>
+<div class="ttc" id="agroup___analog___i_o_html_gab57399e946247652a096a0e2d3a1b69a"><div class="ttname"><a href="group___analog___i_o.html#gab57399e946247652a096a0e2d3a1b69a">AnalogOutputInit</a></div><div class="ttdeci">void AnalogOutputInit(void)</div><div class="ttdoc">Analog output initialization (DAC)</div><div class="ttdef"><b>Definition</b> <a href="analog__io__mcu_8c_source.html#l00095">analog_io_mcu.c:95</a></div></div>
+<div class="ttc" id="agroup___analog___i_o_html_gab5ae00a35744f407072230979e593fd9"><div class="ttname"><a href="group___analog___i_o.html#gab5ae00a35744f407072230979e593fd9">AnalogInputReadSingle</a></div><div class="ttdeci">void AnalogInputReadSingle(adc_ch_t channel, uint16_t *value)</div><div class="ttdoc">Read single channel.</div><div class="ttdef"><b>Definition</b> <a href="analog__io__mcu_8c_source.html#l00105">analog_io_mcu.c:105</a></div></div>
+<div class="ttc" id="agroup___analog___i_o_html_gga4ebdf50515e5d73c58c24fd1491770dca703cf81b7a9530ba8650e0ee2f29d68e"><div class="ttname"><a href="group___analog___i_o.html#gga4ebdf50515e5d73c58c24fd1491770dca703cf81b7a9530ba8650e0ee2f29d68e">CH1</a></div><div class="ttdeci">@ CH1</div><div class="ttdef"><b>Definition</b> <a href="analog__io__mcu_8h_source.html#l00032">analog_io_mcu.h:32</a></div></div>
+<div class="ttc" id="agroup___analog___i_o_html_gga51acd785c14953090a3507d4fa8e5939a3b0a8cf9a7759ea8b7c9494eb7fb3dd4"><div class="ttname"><a href="group___analog___i_o.html#gga51acd785c14953090a3507d4fa8e5939a3b0a8cf9a7759ea8b7c9494eb7fb3dd4">ADC_SINGLE</a></div><div class="ttdeci">@ ADC_SINGLE</div><div class="ttdef"><b>Definition</b> <a href="analog__io__mcu_8h_source.html#l00038">analog_io_mcu.h:38</a></div></div>
+<div class="ttc" id="agroup___timer_html_ga0b1779c5b8f91cc83c8bfd127071ea2f"><div class="ttname"><a href="group___timer.html#ga0b1779c5b8f91cc83c8bfd127071ea2f">TimerStart</a></div><div class="ttdeci">void TimerStart(timer_mcu_t timer)</div><div class="ttdoc">Start timer count.</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8c_source.html#l00110">timer_mcu.c:110</a></div></div>
+<div class="ttc" id="agroup___timer_html_gae8617c0d176463a60441464ad26563f6"><div class="ttname"><a href="group___timer.html#gae8617c0d176463a60441464ad26563f6">TimerInit</a></div><div class="ttdeci">void TimerInit(timer_config_t *timer_ini)</div><div class="ttdoc">Timer initialization.</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8c_source.html#l00055">timer_mcu.c:55</a></div></div>
+<div class="ttc" id="agroup___timer_html_ggacc4e64394d03a6e790f8e52c674534d9a179b1231f027eba52fa4ef94ec174598"><div class="ttname"><a href="group___timer.html#ggacc4e64394d03a6e790f8e52c674534d9a179b1231f027eba52fa4ef94ec174598">TIMER_A</a></div><div class="ttdeci">@ TIMER_A</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8h_source.html#l00032">timer_mcu.h:32</a></div></div>
+<div class="ttc" id="agroup___u_a_r_t_html_ga440f6a03dfd8b310f5fdf42c3bf20c42"><div class="ttname"><a href="group___u_a_r_t.html#ga440f6a03dfd8b310f5fdf42c3bf20c42">UartInit</a></div><div class="ttdeci">void UartInit(serial_config_t *port_config)</div><div class="ttdoc">Serial port initialization.</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8c_source.html#l00107">uart_mcu.c:107</a></div></div>
+<div class="ttc" id="agroup___u_a_r_t_html_ga60db217694ea24ad75fcedda3336a3a8"><div class="ttname"><a href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a></div><div class="ttdeci">void UartSendString(uart_mcu_port_t port, const char *msg)</div><div class="ttdoc">Send a String trough serial port.</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8c_source.html#l00193">uart_mcu.c:193</a></div></div>
+<div class="ttc" id="agroup___u_a_r_t_html_gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056"><div class="ttname"><a href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a></div><div class="ttdeci">@ UART_PC</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8h_source.html#l00032">uart_mcu.h:32</a></div></div>
+<div class="ttc" id="ahc__sr04_8h_html"><div class="ttname"><a href="hc__sr04_8h.html">hc_sr04.h</a></div></div>
+<div class="ttc" id="aili9341_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="ili9341_8c_source.html#l00042">ili9341.c:42</a></div></div>
+<div class="ttc" id="alcditse0803_8h_html"><div class="ttname"><a href="lcditse0803_8h.html">lcditse0803.h</a></div></div>
+<div class="ttc" id="aled_8h_html"><div class="ttname"><a href="led_8h.html">led.h</a></div></div>
+<div class="ttc" id="astructanalog__input__config__t_html"><div class="ttname"><a href="structanalog__input__config__t.html">analog_input_config_t</a></div><div class="ttdoc">Analog inputs config structure.</div><div class="ttdef"><b>Definition</b> <a href="analog__io__mcu_8h_source.html#l00048">analog_io_mcu.h:48</a></div></div>
+<div class="ttc" id="astructanalog__input__config__t_html_a16d10b35d778a5d4fdbda4d75981d310"><div class="ttname"><a href="structanalog__input__config__t.html#a16d10b35d778a5d4fdbda4d75981d310">analog_input_config_t::input</a></div><div class="ttdeci">adc_ch_t input</div><div class="ttdef"><b>Definition</b> <a href="analog__io__mcu_8h_source.html#l00049">analog_io_mcu.h:49</a></div></div>
+<div class="ttc" id="astructserial__config__t_html"><div class="ttname"><a href="structserial__config__t.html">serial_config_t</a></div><div class="ttdoc">Serial port configuration struct.</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8h_source.html#l00038">uart_mcu.h:38</a></div></div>
+<div class="ttc" id="astructserial__config__t_html_a27067c816e8c5402c7be0da9780678b0"><div class="ttname"><a href="structserial__config__t.html#a27067c816e8c5402c7be0da9780678b0">serial_config_t::port</a></div><div class="ttdeci">uart_mcu_port_t port</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8h_source.html#l00039">uart_mcu.h:39</a></div></div>
+<div class="ttc" id="astructtimer__config__t_html"><div class="ttname"><a href="structtimer__config__t.html">timer_config_t</a></div><div class="ttdoc">Timer configuration struct.</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8h_source.html#l00039">timer_mcu.h:39</a></div></div>
+<div class="ttc" id="astructtimer__config__t_html_ab83043b8038c5e630f6a2a05ea007e49"><div class="ttname"><a href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer_config_t::timer</a></div><div class="ttdeci">timer_mcu_t timer</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8h_source.html#l00040">timer_mcu.h:40</a></div></div>
+<div class="ttc" id="aswitch_8h_html"><div class="ttname"><a href="switch_8h.html">switch.h</a></div></div>
+<div class="ttc" id="atimer__mcu_8h_html"><div class="ttname"><a href="timer__mcu_8h.html">timer_mcu.h</a></div></div>
+<div class="ttc" id="auart__mcu_8h_html"><div class="ttname"><a href="uart__mcu_8h.html">uart_mcu.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_436d476d4883225d50b14e25f9d932c5.html">SchvemerE-1C12024</a></li><li class="navelem"><a class="el" href="dir_4dae760e76e3f8945be3653b1bf2945b.html">firmware</a></li><li class="navelem"><a class="el" href="dir_07979404827261c3106a7b53ed9c6ee6.html">projects</a></li><li class="navelem"><a class="el" href="dir_26d79a7406ed643a03909d0322675a97.html">ThermingEMG</a></li><li class="navelem"><a class="el" href="dir_0151091e0e8b2d1f0f7c5553cf08157f.html">main</a></li><li class="navelem"><a class="el" href="_therming_e_m_g_8c.html">ThermingEMG.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>
